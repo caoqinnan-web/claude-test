@@ -98,7 +98,7 @@ export default function ServicesPage() {
               Need a Custom Solution?
             </h2>
             <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-              Every project is unique. Let's discuss your specific needs and create a tailored solution.
+              Every project is unique. Let&apos;s discuss your specific needs and create a tailored solution.
             </p>
             <Link
               href="/about"
