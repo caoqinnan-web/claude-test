@@ -10,7 +10,7 @@ export default function Home() {
             Welcome to My Portfolio
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-            I'm a full-stack developer passionate about creating beautiful and functional web experiences.
+            I&apos;m a full-stack developer passionate about creating beautiful and functional web experiences.
           </p>
           <div className="flex justify-center gap-4">
             <Link
@@ -83,7 +83,7 @@ export default function Home() {
             Ready to Start a Project?
           </h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Let's work together to bring your ideas to life.
+            Let&apos;s work together to bring your ideas to life.
           </p>
           <Link
             href="/about"

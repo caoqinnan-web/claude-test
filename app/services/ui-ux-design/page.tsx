@@ -79,7 +79,7 @@ export default function UIUXDesignPage() {
             <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
               <h3 className="font-semibold text-gray-900 dark:text-white mb-2">User-Centered</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
-                Always putting the user's needs first
+                Always putting the user&apos;s needs first
               </p>
             </div>
             <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">

@@ -27,7 +27,7 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-4 text-gray-600 dark:text-gray-400">
               <p>
-                I'm a full-stack developer with over 5 years of experience in building web applications.
+                I&apos;m a full-stack developer with over 5 years of experience in building web applications.
                 My journey in tech started with a curiosity about how websites work, which quickly turned
                 into a passion for creating them.
               </p>
@@ -37,7 +37,7 @@ export default function AboutPage() {
                 beautiful and functional.
               </p>
               <p>
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source
+                When I&apos;m not coding, you can find me exploring new technologies, contributing to open-source
                 projects, or sharing my knowledge through blog posts and tutorials.
               </p>
             </div>
@@ -121,7 +121,7 @@ export default function AboutPage() {
               </div>
               <p className="text-gray-600 dark:text-gray-400">
                 Developed and maintained multiple client projects, worked with cross-functional
-                teams, and contributed to the company's growth.
+                teams, and contributed to the company&apos;s growth.
               </p>
             </div>
 
