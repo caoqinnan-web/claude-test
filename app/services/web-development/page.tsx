@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Web Development - Services",
-  description: "Professional web development services",
+  title: "网页开发 - 服务",
+  description: "专业的网页开发服务",
 };
 
 export default function WebDevelopmentPage() {
@@ -14,7 +14,7 @@ export default function WebDevelopmentPage() {
           href="/services"
           className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline mb-8"
         >
-          ← Back to Services
+          ← 返回服务
         </Link>
 
         <div className="mb-8">
@@ -24,42 +24,42 @@ export default function WebDevelopmentPage() {
             </svg>
           </div>
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Web Development
+            网页开发
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400">
-            Building modern, responsive, and performant web applications tailored to your needs.
+            构建现代化、响应式、高性能的网页应用程序，满足您的需求。
           </p>
         </div>
 
         <div className="prose dark:prose-invert max-w-none">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-            What I Offer
+            我提供的服务
           </h2>
           <ul className="space-y-3 text-gray-600 dark:text-gray-400">
             <li className="flex items-start">
               <span className="text-blue-600 mr-2">✓</span>
-              Custom web application development
+              定制网页应用开发
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 mr-2">✓</span>
-              Responsive design for all devices
+              全设备响应式设计
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 mr-2">✓</span>
-              Performance optimization
+              性能优化
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 mr-2">✓</span>
-              SEO best practices
+              SEO 最佳实践
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 mr-2">✓</span>
-              Modern frameworks (React, Next.js, etc.)
+              现代框架 (React、Next.js 等)
             </li>
           </ul>
 
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-            Technologies
+            技术栈
           </h2>
           <div className="flex flex-wrap gap-2 mb-6">
             {["React", "Next.js", "TypeScript", "TailwindCSS", "Node.js", "PostgreSQL"].map((tech) => (
@@ -73,31 +73,31 @@ export default function WebDevelopmentPage() {
           </div>
 
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-            Process
+            开发流程
           </h2>
           <div className="space-y-4">
             <div className="border-l-4 border-blue-600 pl-4">
-              <h3 className="font-semibold text-gray-900 dark:text-white">1. Discovery</h3>
+              <h3 className="font-semibold text-gray-900 dark:text-white">1. 需求分析</h3>
               <p className="text-gray-600 dark:text-gray-400">
-                Understanding your requirements and goals
+                了解您的需求和目标
               </p>
             </div>
             <div className="border-l-4 border-blue-600 pl-4">
-              <h3 className="font-semibold text-gray-900 dark:text-white">2. Design</h3>
+              <h3 className="font-semibold text-gray-900 dark:text-white">2. 设计</h3>
               <p className="text-gray-600 dark:text-gray-400">
-                Creating wireframes and visual designs
+                创建线框图和视觉设计
               </p>
             </div>
             <div className="border-l-4 border-blue-600 pl-4">
-              <h3 className="font-semibold text-gray-900 dark:text-white">3. Development</h3>
+              <h3 className="font-semibold text-gray-900 dark:text-white">3. 开发</h3>
               <p className="text-gray-600 dark:text-gray-400">
-                Building your application with clean, maintainable code
+                使用简洁、可维护的代码构建您的应用程序
               </p>
             </div>
             <div className="border-l-4 border-blue-600 pl-4">
-              <h3 className="font-semibold text-gray-900 dark:text-white">4. Testing & Launch</h3>
+              <h3 className="font-semibold text-gray-900 dark:text-white">4. 测试与上线</h3>
               <p className="text-gray-600 dark:text-gray-400">
-                Thorough testing and smooth deployment
+                全面测试和顺利部署
               </p>
             </div>
           </div>

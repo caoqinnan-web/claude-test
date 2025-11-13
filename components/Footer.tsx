@@ -9,16 +9,16 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
-              My Portfolio
+              个人网站
             </h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              Building amazing web experiences with modern technologies.
+              使用现代技术构建令人惊叹的网页体验。
             </p>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
-              Quick Links
+              快速链接
             </h3>
             <ul className="space-y-2">
               <li>
@@ -26,7 +26,7 @@ export function Footer() {
                   href="/about"
                   className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm"
                 >
-                  About
+                  关于
                 </Link>
               </li>
               <li>
@@ -34,7 +34,7 @@ export function Footer() {
                   href="/services"
                   className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm"
                 >
-                  Services
+                  服务
                 </Link>
               </li>
               <li>
@@ -42,7 +42,7 @@ export function Footer() {
                   href="/blog"
                   className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm"
                 >
-                  Blog
+                  博客
                 </Link>
               </li>
             </ul>
@@ -50,7 +50,7 @@ export function Footer() {
 
           <div>
             <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
-              Connect
+              联系方式
             </h3>
             <ul className="space-y-2">
               <li>
@@ -89,7 +89,7 @@ export function Footer() {
 
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
           <p className="text-center text-gray-600 dark:text-gray-400 text-sm">
-            © {currentYear} My Portfolio. All rights reserved.
+            © {currentYear} 个人网站. 版权所有.
           </p>
         </div>
       </div>

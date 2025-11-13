@@ -7,23 +7,23 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-            Welcome to My Portfolio
+            欢迎来到我的个人网站
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-            I&apos;m a full-stack developer passionate about creating beautiful and functional web experiences.
+            我是一名全栈开发工程师，热衷于创建美观且实用的网页体验。
           </p>
           <div className="flex justify-center gap-4">
             <Link
               href="/about"
               className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
-              Learn More
+              了解更多
             </Link>
             <Link
               href="/services"
               className="px-6 py-3 bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"
             >
-              View Services
+              查看服务
             </Link>
           </div>
         </div>
@@ -39,10 +39,10 @@ export default function Home() {
               </svg>
             </div>
             <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
-              Web Development
+              网页开发
             </h3>
             <p className="text-gray-600 dark:text-gray-400">
-              Building responsive and modern web applications with the latest technologies.
+              使用最新技术构建响应式和现代化的网页应用程序。
             </p>
           </div>
 
@@ -53,10 +53,10 @@ export default function Home() {
               </svg>
             </div>
             <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
-              UI/UX Design
+              UI/UX 设计
             </h3>
             <p className="text-gray-600 dark:text-gray-400">
-              Creating intuitive and beautiful user interfaces that users love.
+              创建直观且美观的用户界面，让用户爱不释手。
             </p>
           </div>
 
@@ -67,10 +67,10 @@ export default function Home() {
               </svg>
             </div>
             <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
-              Performance
+              性能优化
             </h3>
             <p className="text-gray-600 dark:text-gray-400">
-              Optimizing applications for speed and efficiency.
+              优化应用程序的速度和效率。
             </p>
           </div>
         </div>
@@ -80,16 +80,16 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="bg-blue-600 dark:bg-blue-700 rounded-2xl p-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Start a Project?
+            准备开始项目了吗？
           </h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Let&apos;s work together to bring your ideas to life.
+            让我们一起合作，将您的想法变为现实。
           </p>
           <Link
             href="/about"
             className="inline-block px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
           >
-            Get in Touch
+            联系我
           </Link>
         </div>
       </section>

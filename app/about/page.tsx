@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About - My Portfolio",
-  description: "Learn more about me and my background",
+  title: "关于我 - 个人网站",
+  description: "了解更多关于我的背景和经历",
 };
 
 export default function AboutPage() {
@@ -12,10 +12,10 @@ export default function AboutPage() {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            About Me
+            关于我
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Passionate developer with a love for creating elegant solutions to complex problems.
+            充满热情的开发者，热爱为复杂问题创造优雅的解决方案。
           </p>
         </div>
 
@@ -23,33 +23,31 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           <div>
             <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-              My Story
+              我的故事
             </h2>
             <div className="space-y-4 text-gray-600 dark:text-gray-400">
               <p>
-                I&apos;m a full-stack developer with over 5 years of experience in building web applications.
-                My journey in tech started with a curiosity about how websites work, which quickly turned
-                into a passion for creating them.
+                我是一名拥有超过5年网页应用开发经验的全栈工程师。
+                我的技术之旅始于对网站工作原理的好奇，这种好奇心很快变成了对创建网站的热情。
               </p>
               <p>
-                I specialize in modern web technologies including React, Next.js, TypeScript, and TailwindCSS.
-                I believe in writing clean, maintainable code and creating user experiences that are both
-                beautiful and functional.
+                我专注于现代网页技术，包括 React、Next.js、TypeScript 和 TailwindCSS。
+                我相信编写简洁、可维护的代码，并创建既美观又实用的用户体验。
               </p>
               <p>
-                When I&apos;m not coding, you can find me exploring new technologies, contributing to open-source
-                projects, or sharing my knowledge through blog posts and tutorials.
+                当我不写代码时，你可以看到我在探索新技术、为开源项目做贡献，
+                或通过博客文章和教程分享我的知识。
               </p>
             </div>
           </div>
 
           <div>
             <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-              Skills & Technologies
+              技能与技术
             </h2>
             <div className="space-y-4">
               <div>
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Frontend</h3>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">前端开发</h3>
                 <div className="flex flex-wrap gap-2">
                   {["React", "Next.js", "TypeScript", "TailwindCSS", "HTML/CSS"].map((skill) => (
                     <span
@@ -63,7 +61,7 @@ export default function AboutPage() {
               </div>
 
               <div>
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Backend</h3>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">后端开发</h3>
                 <div className="flex flex-wrap gap-2">
                   {["Node.js", "Express", "PostgreSQL", "MongoDB", "REST APIs"].map((skill) => (
                     <span
@@ -77,7 +75,7 @@ export default function AboutPage() {
               </div>
 
               <div>
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Tools & Others</h3>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">工具与其他</h3>
                 <div className="flex flex-wrap gap-2">
                   {["Git", "Docker", "AWS", "Vercel", "CI/CD"].map((skill) => (
                     <span
@@ -96,45 +94,45 @@ export default function AboutPage() {
         {/* Experience Timeline */}
         <div className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-8 text-center">
-            Experience
+            工作经历
           </h2>
           <div className="space-y-8">
             <div className="border-l-4 border-blue-600 pl-6">
               <div className="mb-2">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  Senior Full-Stack Developer
+                  高级全栈开发工程师
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400">Tech Company • 2021 - Present</p>
+                <p className="text-gray-600 dark:text-gray-400">科技公司 • 2021 - 至今</p>
               </div>
               <p className="text-gray-600 dark:text-gray-400">
-                Leading development of multiple web applications, mentoring junior developers,
-                and implementing best practices for code quality and performance.
+                主导多个网页应用的开发，指导初级开发人员，
+                并实施代码质量和性能的最佳实践。
               </p>
             </div>
 
             <div className="border-l-4 border-green-600 pl-6">
               <div className="mb-2">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  Full-Stack Developer
+                  全栈开发工程师
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400">Startup Inc • 2019 - 2021</p>
+                <p className="text-gray-600 dark:text-gray-400">创业公司 • 2019 - 2021</p>
               </div>
               <p className="text-gray-600 dark:text-gray-400">
-                Developed and maintained multiple client projects, worked with cross-functional
-                teams, and contributed to the company&apos;s growth.
+                开发和维护多个客户项目，与跨职能团队合作，
+                为公司的成长做出贡献。
               </p>
             </div>
 
             <div className="border-l-4 border-purple-600 pl-6">
               <div className="mb-2">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  Junior Developer
+                  初级开发工程师
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400">Web Agency • 2018 - 2019</p>
+                <p className="text-gray-600 dark:text-gray-400">网页设计公司 • 2018 - 2019</p>
               </div>
               <p className="text-gray-600 dark:text-gray-400">
-                Started my professional journey, learning industry best practices and working
-                on various client projects.
+                开始我的职业生涯，学习行业最佳实践，
+                并参与各种客户项目。
               </p>
             </div>
           </div>
