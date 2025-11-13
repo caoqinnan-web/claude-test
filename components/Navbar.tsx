@@ -8,10 +8,10 @@ export function Navbar() {
   const pathname = usePathname();
 
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/services", label: "Services" },
-    { href: "/blog", label: "Blog" },
+    { href: "/", label: "首页" },
+    { href: "/about", label: "关于" },
+    { href: "/services", label: "服务" },
+    { href: "/blog", label: "博客" },
   ];
 
   return (
@@ -20,7 +20,7 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link href="/" className="text-xl font-bold text-gray-900 dark:text-white">
-              My Portfolio
+              个人网站
             </Link>
           </div>
 
