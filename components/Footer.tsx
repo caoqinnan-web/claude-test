@@ -4,35 +4,38 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 mt-auto">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 mt-auto">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
-              个人网站
+            <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+              曹钦楠
             </h3>
-            <p className="text-gray-600 dark:text-gray-400 text-sm">
-              使用现代技术构建令人惊叹的网页体验。
+            <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
+              人生整理师 · 数字生活整理师 · AI 效率工具教练
+            </p>
+            <p className="text-gray-500 dark:text-gray-500 text-sm">
+              建立低熵系统，掌控你的生活
             </p>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
-              快速链接
-            </h3>
-            <ul className="space-y-2">
+            <h4 className="text-sm font-semibold mb-4 text-gray-900 dark:text-white uppercase tracking-wider">
+              导航
+            </h4>
+            <ul className="space-y-3">
               <li>
                 <Link
                   href="/about"
-                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm"
+                  className="text-gray-600 dark:text-gray-400 hover:text-[#FF6B6B] dark:hover:text-[#FF8787] text-sm transition-colors"
                 >
-                  关于
+                  关于阿楠
                 </Link>
               </li>
               <li>
                 <Link
                   href="/services"
-                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm"
+                  className="text-gray-600 dark:text-gray-400 hover:text-[#FF6B6B] dark:hover:text-[#FF8787] text-sm transition-colors"
                 >
                   服务
                 </Link>
@@ -40,56 +43,57 @@ export function Footer() {
               <li>
                 <Link
                   href="/blog"
-                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm"
+                  className="text-gray-600 dark:text-gray-400 hover:text-[#FF6B6B] dark:hover:text-[#FF8787] text-sm transition-colors"
                 >
-                  博客
+                  文章
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
+            <h4 className="text-sm font-semibold mb-4 text-gray-900 dark:text-white uppercase tracking-wider">
               联系方式
-            </h3>
-            <ul className="space-y-2">
+            </h4>
+            <ul className="space-y-3">
               <li>
                 <a
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm"
+                  href="mailto:hello@caoqinnan.com"
+                  className="text-gray-600 dark:text-gray-400 hover:text-[#FF6B6B] dark:hover:text-[#FF8787] text-sm transition-colors flex items-center gap-2"
                 >
-                  GitHub
+                  <span>📧</span>
+                  <span>邮件咨询</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="https://linkedin.com"
+                  href="https://twitter.com/caoqinnan"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm"
+                  className="text-gray-600 dark:text-gray-400 hover:text-[#FF6B6B] dark:hover:text-[#FF8787] text-sm transition-colors flex items-center gap-2"
                 >
-                  LinkedIn
+                  <span>🐦</span>
+                  <span>Twitter</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="https://twitter.com"
+                  href="https://www.xiaohongshu.com/user/caoqinnan"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm"
+                  className="text-gray-600 dark:text-gray-400 hover:text-[#FF6B6B] dark:hover:text-[#FF8787] text-sm transition-colors flex items-center gap-2"
                 >
-                  Twitter
+                  <span>📕</span>
+                  <span>小红书</span>
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
-          <p className="text-center text-gray-600 dark:text-gray-400 text-sm">
-            © {currentYear} 个人网站. 版权所有.
+        <div className="pt-8 border-t border-gray-200 dark:border-gray-800 text-center">
+          <p className="text-gray-500 dark:text-gray-500 text-sm">
+            © {currentYear} 曹钦楠. 保留所有权利.
           </p>
         </div>
       </div>

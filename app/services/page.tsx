@@ -2,113 +2,250 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "服务 - 个人网站",
-  description: "探索我提供的服务",
+  title: "服务 - 曹钦楠",
+  description: "数字生活整理、AI 效率工具教练、人生整理 & 时间管理 - 专业一对一咨询服务",
 };
-
-const services = [
-  {
-    id: "web-development",
-    title: "网页开发",
-    description: "使用现代技术和最佳实践构建定制的网页应用程序。",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-      </svg>
-    ),
-    color: "blue",
-  },
-  {
-    id: "ui-ux-design",
-    title: "UI/UX 设计",
-    description: "提供优秀用户体验的美观直观的用户界面。",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-      </svg>
-    ),
-    color: "green",
-  },
-  {
-    id: "api-development",
-    title: "API 开发",
-    description: "为您的应用程序和服务提供健壮且可扩展的 RESTful API。",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-      </svg>
-    ),
-    color: "purple",
-  },
-  {
-    id: "consulting",
-    title: "技术咨询",
-    description: "提供关于架构、技术栈和最佳实践的专业建议。",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-      </svg>
-    ),
-    color: "orange",
-  },
-];
 
 export default function ServicesPage() {
   return (
-    <div className="bg-white dark:bg-gray-900 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            服务项目
+    <div className="bg-white dark:bg-gray-900">
+      {/* Hero */}
+      <section className="bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 py-20">
+        <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            三大核心服务
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            我提供一系列服务，帮助您实现数字项目。
+          <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+            从物理空间到数字世界，从时间管理到AI效率<br className="hidden sm:block" />
+            全方位帮你建立低熵系统
           </p>
         </div>
+      </section>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {services.map((service) => (
-            <Link
-              key={service.id}
-              href={`/services/${service.id}`}
-              className="group p-8 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-blue-500 dark:hover:border-blue-400"
-            >
-              <div className={`w-16 h-16 bg-${service.color}-100 dark:bg-${service.color}-900 rounded-lg flex items-center justify-center mb-6 text-${service.color}-600 dark:text-${service.color}-400 group-hover:scale-110 transition-transform`}>
-                {service.icon}
+      {/* Service 1: 数字生活整理 */}
+      <section id="digital" className="py-20 scroll-mt-20">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-block px-4 py-2 bg-[#FF6B6B]/10 text-[#FF6B6B] rounded-full text-sm font-medium mb-4">
+                Service 01
               </div>
-              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                {service.title}
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                数字生活整理
               </h2>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                {service.description}
+              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+                你的手机、电脑、云端，应该是你的工具，而不是负担。
+                让我帮你建立一个干净、直观、可持续的数字世界。
               </p>
-              <span className="text-blue-600 dark:text-blue-400 font-semibold group-hover:underline">
-                了解更多 →
-              </span>
-            </Link>
-          ))}
-        </div>
 
-        {/* CTA Section */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              需要定制解决方案？
-            </h2>
-            <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-              每个项目都是独一无二的。让我们讨论您的具体需求，创建量身定制的解决方案。
-            </p>
-            <Link
-              href="/about"
-              className="inline-block px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-            >
-              联系我
-            </Link>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-[#FF6B6B] rounded-full flex items-center justify-center text-white text-sm">✓</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">手机、电脑、平板系统级优化</h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">从设置到使用习惯的全方位改造</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-[#FF6B6B] rounded-full flex items-center justify-center text-white text-sm">✓</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">文件/照片/密码/账号整理</h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">建立清晰的数字资产管理系统</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-[#FF6B6B] rounded-full flex items-center justify-center text-white text-sm">✓</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Apple 全家桶深度设置</h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">iCloud、连续互通、快捷指令等</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-[#FF6B6B] rounded-full flex items-center justify-center text-white text-sm">✓</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">PARA 架构 & 第二大脑搭建</h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">科学的信息管理和知识管理系统</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-[#FF6B6B] rounded-full flex items-center justify-center text-white text-sm">✓</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">数字极简 + 数字审美</h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">让你的数字空间既高效又赏心悦目</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-[#FF6B6B]/10 to-[#FF6B6B]/5 dark:from-[#FF6B6B]/20 dark:to-[#FF6B6B]/10 rounded-3xl p-12 flex items-center justify-center">
+              <div className="text-8xl">💻</div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Service 2: AI 效率工具教练 */}
+      <section id="ai" className="bg-gray-50 dark:bg-gray-800/50 py-20 scroll-mt-20">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1 bg-gradient-to-br from-[#51CF66]/10 to-[#51CF66]/5 dark:from-[#51CF66]/20 dark:to-[#51CF66]/10 rounded-3xl p-12 flex items-center justify-center">
+              <div className="text-8xl">🤖</div>
+            </div>
+
+            <div className="order-1 md:order-2">
+              <div className="inline-block px-4 py-2 bg-[#51CF66]/10 text-[#51CF66] rounded-full text-sm font-medium mb-4">
+                Service 02
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                AI 效率工具教练
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+                AI 不是用来&ldquo;聊天&rdquo;的，而是应该成为你的外脑和助理。
+                让我教你如何真正用好 AI，让效率提升 10 倍。
+              </p>
+
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-[#51CF66] rounded-full flex items-center justify-center text-white text-sm">✓</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">一对一 AI 工作流咨询</h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">根据你的行业和需求定制专属方案</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-[#51CF66] rounded-full flex items-center justify-center text-white text-sm">✓</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Prompt 工程 & 结构化写作</h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">让 AI 真正理解你、配合你</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-[#51CF66] rounded-full flex items-center justify-center text-white text-sm">✓</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">AI 工具深度应用</h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">ChatGPT、Claude、NotebookLM、Notion AI 等</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-[#51CF66] rounded-full flex items-center justify-center text-white text-sm">✓</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">效率系统改造</h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">文档管理、知识管理、任务管理的 AI 化升级</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-[#51CF66] rounded-full flex items-center justify-center text-white text-sm">✓</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">AI 协作模式建立</h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">把 AI 真正融入你的日常工作流程</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service 3: 人生整理 & 时间管理 */}
+      <section id="life" className="py-20 scroll-mt-20">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-block px-4 py-2 bg-[#845EF7]/10 text-[#845EF7] rounded-full text-sm font-medium mb-4">
+                Service 03
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                人生整理 & 时间管理
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+                工具和方法只是表面，真正的改变来自于底层的生活秩序重建。
+                让我帮你找回对生活的掌控感。
+              </p>
+
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-[#845EF7] rounded-full flex items-center justify-center text-white text-sm">✓</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">一对一深度咨询</h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">不是课程，而是针对你的情况定制方案</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-[#845EF7] rounded-full flex items-center justify-center text-white text-sm">✓</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">生活秩序搭建</h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">从作息、饮食到工作节奏的系统优化</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-[#845EF7] rounded-full flex items-center justify-center text-white text-sm">✓</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">时间管理系统</h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">不是&ldquo;挤时间&rdquo;，而是&ldquo;设计时间&rdquo;</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-[#845EF7] rounded-full flex items-center justify-center text-white text-sm">✓</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">注意力管理</h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">在信息过载时代保持专注的能力</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-[#845EF7] rounded-full flex items-center justify-center text-white text-sm">✓</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">拖延症改善 & 行动力提升</h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">从根源解决拖延问题，建立行动系统</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-[#845EF7] rounded-full flex items-center justify-center text-white text-sm">✓</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">个人策略制定</h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">长期目标规划与实现路径设计</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-[#845EF7]/10 to-[#845EF7]/5 dark:from-[#845EF7]/20 dark:to-[#845EF7]/10 rounded-3xl p-12 flex items-center justify-center">
+              <div className="text-8xl">🎯</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-gradient-to-r from-[#FF6B6B] to-[#845EF7] py-20">
+        <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-center text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            准备好开始改变了吗？
+          </h2>
+          <p className="text-lg text-white/90 mb-8 leading-relaxed">
+            不提供标准课程，只提供为你量身定制的一对一咨询。<br className="hidden sm:block" />
+            让我们一起建立属于你的低熵系统。
+          </p>
+          <a
+            href="mailto:hello@caoqinnan.com"
+            className="inline-block px-10 py-4 bg-white text-[#FF6B6B] rounded-xl hover:bg-gray-100 transition-all shadow-xl font-medium text-lg"
+          >
+            联系阿楠咨询
+          </a>
+        </div>
+      </section>
     </div>
   );
 }
