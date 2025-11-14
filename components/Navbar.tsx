@@ -12,6 +12,7 @@ export function Navbar() {
     { href: "/about", label: "关于阿楠" },
     { href: "/services", label: "服务" },
     { href: "/blog", label: "文章" },
+    { href: "/faq", label: "FAQ" },
   ];
 
   return (
