@@ -92,10 +92,10 @@ export default function BlogPage() {
             如果你也想建立低熵、有序、可持续的生活系统，欢迎通过邮件与我交流。
           </p>
           <a
-            href="mailto:hello@caoqinnan.com"
+            href="mailto:cqn1024@icloud.com"
             className="inline-block px-8 py-3 bg-white text-[#FF6B6B] rounded-lg hover:bg-gray-100 transition-colors font-semibold"
           >
-            📧 联系我：hello@caoqinnan.com
+            📧 联系我：cqn1024@icloud.com
           </a>
         </div>
       </div>

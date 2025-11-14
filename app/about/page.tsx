@@ -16,7 +16,7 @@ export default function AboutPage() {
             你好，我是曹钦楠（阿楠）
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-            人生整理师 · 数字生活整理师 · AI 效率工具教练
+            人生整理师 · 个人数字空间建筑师 · 家庭整理收纳师 · AI 效率工具教练
           </p>
         </div>
       </section>
@@ -34,31 +34,43 @@ export default function AboutPage() {
             </p>
 
             <p>
-              在成为人生整理师之前，我经历过现代人都会遭遇的困境：
+              我出生于中原河南，成长于西北新疆，求学于东北哈尔滨，从小在棉花地里长大，对&ldquo;劳动&rdquo;和&ldquo;秩序&rdquo;有很具体的体感。大学期间参军入伍服役两年，培养了强执行力与抗压能力。
+            </p>
+
+            <p>
+              毕业后，我做过快消零售管培生、教育基地运营、国企项目管理等多领域工作。看起来一切按部就班，但内心始终有种说不清的失控感：
               手机里几千张照片找不到想要的那一张、
               电脑桌面堆满文件却不知道哪个是最新版本、
-              每天忙得团团转却说不清到底做了什么、
-              想改变却不知从何开始…
+              每天忙得团团转却说不清到底做了什么…
             </p>
 
             <p>
-              <span className="text-[#FF6B6B] font-semibold">那种被生活推着走的失控感</span>，
-              让我开始思考：为什么明明拥有这么多便利工具，生活反而越来越混乱？
+              <span className="text-[#FF6B6B] font-semibold">2023 年，我从国企辞职了。</span>
             </p>
 
             <p>
-              后来我发现，<span className="font-semibold">问题不在于我们拥有太多，而在于缺乏一个有序的系统</span>。
+              辞职后，我去了青藏高原——唐古拉山镇，做了 1 个月的环保志愿者，捡垃圾、做环保宣传、垃圾分类。在那片纯净的高原上，我开始重新思考：为什么明明拥有这么多便利工具，生活反而越来越混乱？
             </p>
 
             <p>
-              于是我开始研究整理术、时间管理、信息管理、AI 工具应用…
-              从物理空间到数字空间，从时间规划到注意力管理，
-              一点一点为自己建立起一个<span className="text-[#FF6B6B] font-semibold">&ldquo;低熵系统&rdquo;</span>。
+              回来后，我开始尝试整理他人的家庭，也整理自己的数字世界。累计 <span className="font-semibold">近 500 小时</span>的线下入户整理经验让我意识到：<span className="font-semibold">整理不只是东西归位，而是帮助别人重建掌控感的方式</span>。
             </p>
 
             <p>
-              当我的生活真正变得有序、清晰、可控后，
-              我决定把这套方法分享给更多人。
+              我逐步从单纯的&ldquo;家庭收纳师&rdquo;，升级为同时处理：
+              <span className="font-semibold text-gray-900 dark:text-white"> 物理空间</span>（家居、衣物、物品）、
+              <span className="font-semibold text-gray-900 dark:text-white">数字空间</span>（电脑、手机、文件、照片、密码、账户）、
+              <span className="font-semibold text-gray-900 dark:text-white">时间与精力管理</span>（时间块、节奏设计）、
+              <span className="font-semibold text-gray-900 dark:text-white">AI 工具协作</span>（第二大脑搭建、AI 使用策略）。
+            </p>
+
+            <p>
+              我提出<span className="text-[#FF6B6B] font-semibold">&ldquo;低熵生活&rdquo;</span>与<span className="text-[#FF6B6B] font-semibold">&ldquo;数字栖息地&rdquo;</span>理念：
+              在高噪音时代，我们每个人都变得数据化。通过搭建稳定、有序、可维护的系统，减少精力损耗，让人重新成为自己生活的主人。
+            </p>
+
+            <p>
+              现在，我已经服务 <span className="font-semibold">20+ 位</span>个体客户，覆盖北京、杭州、上海、成都等城市，帮助他们建立属于自己的低熵系统。
             </p>
           </div>
         </div>
@@ -199,7 +211,7 @@ export default function AboutPage() {
           一对一咨询，为你量身定制专属的低熵系统
         </p>
         <a
-          href="mailto:hello@caoqinnan.com"
+          href="mailto:cqn1024@icloud.com"
           className="inline-block px-10 py-4 bg-[#FF6B6B] text-white rounded-xl hover:bg-[#FF5252] transition-all shadow-lg shadow-[#FF6B6B]/20 hover:shadow-xl font-medium text-lg"
         >
           联系阿楠

@@ -31,11 +31,11 @@ export default function ServicesPage() {
                 Service 01
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                数字生活整理
+                重建你的数字栖息地
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
                 你的手机、电脑、云端，应该是你的工具，而不是负担。
-                让我帮你建立一个干净、直观、可持续的数字世界。
+                让我帮你建立一个干净、直观、可持续的数字世界——一个真正属于你的数字栖息地。
               </p>
 
               <div className="space-y-4 mb-8">
@@ -101,11 +101,11 @@ export default function ServicesPage() {
                 Service 02
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                AI 效率工具教练
+                和 AI 合作，而不是被它吓到
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
                 AI 不是用来&ldquo;聊天&rdquo;的，而是应该成为你的外脑和助理。
-                让我教你如何真正用好 AI，让效率提升 10 倍。
+                让我教你如何真正用好 AI，让它成为你的效率放大器。
               </p>
 
               <div className="space-y-4 mb-8">
@@ -163,11 +163,11 @@ export default function ServicesPage() {
                 Service 03
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                人生整理 & 时间管理
+                让时间重新站在你这边
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
                 工具和方法只是表面，真正的改变来自于底层的生活秩序重建。
-                让我帮你找回对生活的掌控感。
+                让我帮你从根本上改变与时间、精力、注意力的关系。
               </p>
 
               <div className="space-y-4 mb-8">
@@ -239,7 +239,7 @@ export default function ServicesPage() {
             让我们一起建立属于你的低熵系统。
           </p>
           <a
-            href="mailto:hello@caoqinnan.com"
+            href="mailto:cqn1024@icloud.com"
             className="inline-block px-10 py-4 bg-white text-[#FF6B6B] rounded-xl hover:bg-gray-100 transition-all shadow-xl font-medium text-lg"
           >
             联系阿楠咨询

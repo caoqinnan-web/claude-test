@@ -12,7 +12,7 @@ export function Footer() {
               曹钦楠
             </h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
-              人生整理师 · 数字生活整理师 · AI 效率工具教练
+              人生整理师 · 个人数字空间建筑师 · AI 效率工具教练
             </p>
             <p className="text-gray-500 dark:text-gray-500 text-sm">
               建立低熵系统，掌控你的生活
@@ -58,7 +58,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="mailto:hello@caoqinnan.com"
+                  href="mailto:cqn1024@icloud.com"
                   className="text-gray-600 dark:text-gray-400 hover:text-[#FF6B6B] dark:hover:text-[#FF8787] text-sm transition-colors flex items-center gap-2"
                 >
                   <span>📧</span>
@@ -67,24 +67,24 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://twitter.com/caoqinnan"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 dark:text-gray-400 hover:text-[#FF6B6B] dark:hover:text-[#FF8787] text-sm transition-colors flex items-center gap-2"
-                >
-                  <span>🐦</span>
-                  <span>Twitter</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.xiaohongshu.com/user/caoqinnan"
+                  href="https://xhslink.com/m/741qhM8BMO0"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 dark:text-gray-400 hover:text-[#FF6B6B] dark:hover:text-[#FF8787] text-sm transition-colors flex items-center gap-2"
                 >
                   <span>📕</span>
                   <span>小红书</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.xiaoyuzhoufm.com/episode/681b3d04e29814cf20d71c04"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 dark:text-gray-400 hover:text-[#FF6B6B] dark:hover:text-[#FF8787] text-sm transition-colors flex items-center gap-2"
+                >
+                  <span>🎙️</span>
+                  <span>播客</span>
                 </a>
               </li>
             </ul>
