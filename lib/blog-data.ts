@@ -11,265 +11,932 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    id: "getting-started-with-nextjs",
-    title: "Getting Started with Next.js 15",
-    excerpt: "Learn how to build modern web applications with Next.js 15 and its powerful features.",
+    id: "phone-organization-guide",
+    title: "手机整理实战：让手机回归工具属性",
+    excerpt: "手机里躺着 200+ 个 App、3000+ 张照片、几十个未读通知？这篇文章教你如何用一个下午，彻底整理你的数字生活入口。",
     content: `
-# Getting Started with Next.js 15
+# 手机整理实战：让手机回归工具属性
 
-Next.js 15 brings exciting new features and improvements to the React framework. In this post, we'll explore what's new and how to get started.
+你的手机主屏幕有多少个 App？打开相册有多少张照片？每天收到多少条推送通知？
 
-## What's New in Next.js 15
+如果答案是&ldquo;数不清&rdquo;，那么你的手机已经不再是工具，而是变成了一个熵值不断增加的混乱系统。
 
-- **Improved Performance**: Faster builds and better runtime performance
-- **Enhanced Image Optimization**: New image component with better defaults
-- **App Router Improvements**: More stable and feature-rich
-- **Server Actions**: Simplified data mutations
+## 为什么要整理手机？
 
-## Getting Started
+手机是我们最常使用的数字设备，也是数字生活的第一入口。一个混乱的手机会：
 
-First, create a new Next.js project:
+- **消耗注意力**：每次打开手机都要在一堆 App 中寻找
+- **产生焦虑**：红点、通知、未读消息造成心理负担
+- **降低效率**：找不到文件、照片、笔记，浪费大量时间
+- **影响决策**：信息过载导致选择困难
 
-\`\`\`bash
-npx create-next-app@latest my-app
-cd my-app
-npm run dev
+## 手机整理三步法
+
+### 第一步：做减法（删除）
+
+**App 清理原则：**
+- 30 天未使用的 App 直接删除
+- 功能重复的 App 只保留最好用的一个
+- 娱乐类 App 控制在 3 个以内
+- 不要&ldquo;也许将来会用&rdquo; —— 相信我，不会的
+
+**通知清理原则：**
+- 只保留即时通讯类 App 的通知权限
+- 关闭所有营销、推荐类通知
+- 关闭红点标记，让眼睛清净
+
+### 第二步：做整理（分类）
+
+**推荐的主屏幕布局：**
+- 第一屏：每天必用的 8-12 个 App（微信、日历、笔记等）
+- 第二屏：按场景分类的文件夹（工作、学习、生活、出行）
+- 其他屏：少用但需要保留的工具
+
+**照片整理原则：**
+- 每周一次，删除模糊、重复、无意义的照片
+- 使用相册分类功能创建专辑
+- 重要照片及时备份到云端或电脑
+
+### 第三步：建立系统（维护）
+
+- **每周五晚：**清理本周产生的截图、下载文件
+- **每月底：**检查 App 使用情况，清理不常用的
+- **新 App 30 天试用期：**如果一个月没打开超过 3 次，立即删除
+
+## 我的手机整理案例
+
+整理前：
+- 153 个 App，4 屏主屏幕
+- 6800+ 张照片，大部分是截图和重复照片
+- 平均每天 50+ 条通知
+
+整理后：
+- 38 个 App，1.5 屏主屏幕
+- 1200 张精选照片，分类清晰
+- 平均每天 5 条有效通知
+
+**改变：**每天节省约 30 分钟的&ldquo;找东西&rdquo;时间，手机使用时长减少 40%，注意力更集中。
+
+## 实用工具推荐
+
+- **iPhone 用户：**充分利用专注模式、屏幕使用时间、快捷指令
+- **Android 用户：**使用数字健康工具、应用分身、桌面小部件
+- **通用原则：**优先使用系统自带功能，不要为了整理而下载更多 App
+
+## 写在最后
+
+手机整理不是一次性任务，而是建立一个低熵的数字生活系统。
+
+记住：**工具是为了服务人，而不是让人被工具控制。**
+
+开始行动吧，用一个下午，重新掌控你的数字生活第一入口。
+    `,
+    author: "曹钦楠",
+    date: "2024-11-12",
+    category: "数字整理",
+    readTime: "5 分钟",
+  },
+  {
+    id: "chatgpt-productivity-guide",
+    title: "AI 工具实战：如何用 ChatGPT 提升 10 倍效率",
+    excerpt: "ChatGPT 不是聊天机器人，而是你的第二大脑。掌握这 5 个使用场景，让 AI 成为你的效率放大器。",
+    content: `
+# AI 工具实战：如何用 ChatGPT 提升 10 倍效率
+
+很多人把 ChatGPT 当成&ldquo;聊天机器人&rdquo;，问一些&ldquo;你好吗&rdquo;&ldquo;讲个笑话&rdquo;之类的问题。
+
+但实际上，ChatGPT 是目前最强大的个人效率工具，可以成为你的：
+- 📝 文字处理助手
+- 🧠 思考伙伴
+- 📊 信息整理工具
+- 🎯 决策支持系统
+
+## 场景 1：文字处理（节省 80% 时间）
+
+**工作邮件：**
+- 输入：&ldquo;帮我写一封邮件，告诉客户项目延期 3 天，原因是...，态度诚恳专业&rdquo;
+- 1 分钟搞定，比自己写 10 分钟质量更高
+
+**会议纪要：**
+- 输入：&ldquo;把这段录音转成会议纪要，提取关键决策、待办事项、负责人&rdquo;
+- 结构化输出，一目了然
+
+**文章改写：**
+- 输入：&ldquo;把这篇文章改成小红书风格 / 商业报告风格 / 朋友圈文案&rdquo;
+- 一键适配不同场景
+
+## 场景 2：思考伙伴（突破认知瓶颈）
+
+**问题拆解：**
+
+\`\`\`
+我：我想提升工作效率，但不知道从哪里开始
+
+ChatGPT：让我们分步骤分析：
+1. 先识别时间浪费在哪里（时间记录）
+2. 找出 3 个最耗时且低价值的任务
+3. 针对性优化（自动化/外包/删除）
+4. 建立每日复盘机制
+
+我建议先做一周时间记录，你可以用...
 \`\`\`
 
-## Key Features
+**多角度分析：**
+- &ldquo;从心理学、经济学、系统思维三个角度，分析为什么我总是拖延&rdquo;
+- &ldquo;如果你是我的导师/老板/客户，你会怎么看这个问题？&rdquo;
 
-### File-based Routing
+## 场景 3：信息整理（建立知识体系）
 
-Next.js uses a file-based routing system, making it easy to create pages and routes.
+**读书笔记整理：**
 
-### Server Components
+\`\`\`
+我：把这本书的重点整理成思维导图格式，包含核心概念、实践方法、案例
 
-Take advantage of React Server Components for better performance and smaller bundle sizes.
+ChatGPT：[生成结构化笔记]
 
-### Built-in Optimization
+我：基于这本书，给我设计一个 30 天实践计划
+\`\`\`
 
-Next.js automatically optimizes your application with features like code splitting and image optimization.
+**行业研究：**
+- &ldquo;梳理一下数字整理行业的发展趋势、主要玩家、商业模式&rdquo;
+- &ldquo;对比 Notion、Obsidian、Logseq 的优劣势，给出选择建议&rdquo;
 
-## Conclusion
+## 场景 4：学习加速（快速掌握新技能）
 
-Next.js 15 is a powerful framework that makes building modern web applications easier than ever. Give it a try in your next project!
+**定制学习路径：**
+
+\`\`\`
+我：我想学 Python 自动化办公，每天只有 30 分钟，基础为零，帮我设计 3 个月学习计划
+
+ChatGPT：[输出阶段性学习路径]
+第 1-4 周：Python 基础语法...
+第 5-8 周：文件处理与数据操作...
+[每周具体学习内容 + 练习项目]
+\`\`\`
+
+**知识点解释：**
+- &ldquo;用讲给 10 岁小孩听的方式，解释什么是『低熵系统』&rdquo;
+- &ldquo;用类比的方式解释『PARA 文件管理法』&rdquo;
+
+## 场景 5：决策支持（避免选择困难）
+
+**利弊分析：**
+
+\`\`\`
+我：我在考虑是否要换工作，新工作薪资高 30%，但通勤时间多 1 小时，帮我分析利弊
+
+ChatGPT：让我们从多个维度分析：
+
+财务角度：[计算实际收益]
+时间成本：[计算年度时间损失]
+职业发展：[...]
+生活质量：[...]
+
+建议：[给出决策框架]
+\`\`\`
+
+## 高阶技巧：打造你的专属 AI 助手
+
+### 技巧 1：设定角色（Role Prompting）
+
+不要直接问问题，先设定角色：
+
+\`\`\`
+"你是一位有 20 年经验的时间管理专家，擅长帮助职场人士建立高效工作系统。现在，我遇到一个问题..."
+\`\`\`
+
+### 技巧 2：提供上下文
+
+给 AI 更多背景信息：
+
+\`\`\`
+"我是一名 30 岁的产品经理，每天工作 10 小时，经常感觉时间不够用。我已经尝试过番茄工作法但效果不明显。请帮我..."
+\`\`\`
+
+### 技巧 3：要求具体格式
+
+明确输出格式：
+
+\`\`\`
+"请以表格形式输出"
+"请给出 3 个具体可执行的行动步骤"
+"请用项目符号列出要点"
+\`\`\`
+
+## 我的实际案例
+
+使用 ChatGPT 后，我的工作流发生了这些变化：
+
+- **写方案：**从 3 小时降到 40 分钟
+- **信息研究：**从 2 天降到 2 小时
+- **邮件回复：**从每天 1 小时降到 15 分钟
+- **学习新技能：**学习曲线缩短 60%
+
+**关键不是 AI 有多强大，而是你会不会提问。**
+
+## 开始行动
+
+1. 列出你每天最耗时的 3 个任务
+2. 尝试用 ChatGPT 优化其中 1 个
+3. 记录节省的时间和质量改善
+4. 逐步扩展到更多场景
+
+AI 时代，效率的差距会越来越大。
+
+而你，准备好了吗？
     `,
-    author: "John Doe",
+    author: "曹钦楠",
     date: "2024-11-10",
-    category: "Web Development",
-    readTime: "5 min read",
+    category: "AI 效率",
+    readTime: "6 分钟",
   },
   {
-    id: "tailwindcss-best-practices",
-    title: "TailwindCSS Best Practices for 2024",
-    excerpt: "Discover the best practices for using TailwindCSS in modern web development projects.",
+    id: "para-file-management",
+    title: "PARA 文件管理法：告别数字混乱的终极方案",
+    excerpt: "电脑里有 3000+ 个文件，每次找东西要翻半天？试试这个被硅谷精英广泛使用的文件管理系统。",
     content: `
-# TailwindCSS Best Practices for 2024
+# PARA 文件管理法：告别数字混乱的终极方案
 
-TailwindCSS has become one of the most popular CSS frameworks. Here are some best practices to make the most of it.
+打开你的电脑，桌面上有多少个文件？
 
-## Why TailwindCSS?
+&ldquo;新建文件夹&rdquo;&ldquo;新建文件夹(2)&rdquo;&ldquo;最终版&rdquo;&ldquo;最终版-修改&rdquo;&ldquo;真的最终版&rdquo;...
 
-- **Utility-First**: Build designs directly in your markup
-- **Responsive Design**: Easy-to-use responsive utilities
-- **Customization**: Highly customizable with configuration
-- **Performance**: Unused styles are purged automatically
+如果这些词让你感到熟悉，说明你需要一个真正有效的文件管理系统。
 
-## Best Practices
+## 什么是 PARA？
 
-### 1. Use the Configuration File
+PARA 是一种文件组织方法，由生产力专家 Tiago Forte 提出，将所有信息分为 4 个类别：
 
-Customize your Tailwind setup in \`tailwind.config.js\`:
+- **P - Projects（项目）**：有明确截止日期的工作
+- **A - Areas（领域）**：需要持续维护的责任范围
+- **R - Resources（资源）**：感兴趣的主题和资料
+- **A - Archives（归档）**：已完成或不再活跃的内容
 
-\`\`\`javascript
-module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        primary: '#3B82F6',
-      },
-    },
-  },
-}
+## 为什么 PARA 这么有效？
+
+传统的文件分类方式（按文件类型、按日期、按项目）都有问题：
+
+**按类型分类的问题：**
+- 一个项目的文件会分散在&ldquo;文档&rdquo;&ldquo;图片&rdquo;&ldquo;表格&rdquo;等不同文件夹
+- 找资料需要记住文件格式，增加认知负担
+
+**按日期分类的问题：**
+- 过了几个月，你还记得那个文件是什么时候创建的吗？
+- 同一个项目的文件被时间线切割
+
+**PARA 的优势：**
+- ✅ 按&ldquo;可操作性&rdquo;分类，符合大脑思考方式
+- ✅ 清晰的优先级（Projects > Areas > Resources）
+- ✅ 简单易维护，不需要复杂的子文件夹
+- ✅ 适用于所有数字工具（电脑、云盘、笔记软件）
+
+## PARA 实战：四个层级详解
+
+### Projects（项目）- 短期、有截止日期
+
+**定义：**有明确目标和截止日期的工作
+
+**例子：**
+- 准备年度总结 PPT（截止 12.20）
+- 学习 Python 完成自动化脚本（截止 11.30）
+- 筹备团队活动（截止 12.15）
+
+**命名建议：**
+
+\`\`\`
+📁 Projects
+  ├─ 2024-年度总结PPT-1220
+  ├─ 2024-Python自动化学习-1130
+  └─ 2024-团队建设活动-1215
 \`\`\`
 
-### 2. Create Reusable Components
+**使用规则：**
+- 项目完成后，立即移动到 Archives
+- 保持 Projects 文件夹在 5-15 个之间
+- 每周回顾，清理已完成项目
 
-Don't repeat utility classes. Extract common patterns into components.
+### Areas（领域）- 长期、需持续维护
 
-### 3. Use @apply Sparingly
+**定义：**没有截止日期，但需要持续投入的领域
 
-While @apply is useful, try to use utility classes directly when possible for better performance.
+**例子：**
+- 健康管理（运动记录、体检报告）
+- 财务管理（账单、投资记录）
+- 个人品牌（公众号素材、个人网站）
+- 职业发展（简历、作品集）
 
-### 4. Leverage Tailwind Plugins
+**命名建议：**
 
-Use official and community plugins to extend functionality.
-
-## Dark Mode
-
-Tailwind makes dark mode implementation simple:
-
-\`\`\`jsx
-<div className="bg-white dark:bg-gray-900">
-  <p className="text-black dark:text-white">Hello World</p>
-</div>
+\`\`\`
+📁 Areas
+  ├─ 健康管理
+  ├─ 财务管理
+  ├─ 职业发展
+  └─ 个人品牌
 \`\`\`
 
-## Conclusion
+**使用规则：**
+- Areas 数量控制在 10-15 个
+- 每月回顾，确保每个领域都在推进
+- 如果某个 Area 6 个月没更新，考虑归档
 
-Following these best practices will help you build maintainable and performant applications with TailwindCSS.
+### Resources（资源）- 感兴趣的主题
+
+**定义：**将来可能有用的参考资料
+
+**例子：**
+- 数字整理（相关文章、工具评测）
+- 时间管理（书籍笔记、方法论）
+- 设计灵感（优秀案例、配色方案）
+
+**命名建议：**
+
+\`\`\`
+📁 Resources
+  ├─ 数字整理
+  ├─ 时间管理
+  ├─ AI工具
+  └─ 设计灵感
+\`\`\`
+
+**使用规则：**
+- 资源是&ldquo;被动&rdquo;的，不需要行动
+- 收集时问自己：&ldquo;这个信息将来真的会用到吗？&rdquo;
+- 每季度清理一次，删除过时资源
+
+### Archives（归档）- 已完成或不活跃
+
+**定义：**所有完成的项目、不再活跃的领域、用不上的资源
+
+**使用建议：**
+
+\`\`\`
+📁 Archives
+  ├─ Projects-2024
+  │   ├─ 2024-Q1项目
+  │   └─ 2024-Q2项目
+  ├─ Areas-已停止
+  └─ Resources-已过时
+\`\`\`
+
+## 实施 PARA 的 5 个步骤
+
+### 第 1 步：创建文件夹结构（5 分钟）
+
+在电脑、云盘、笔记软件中创建：
+
+\`\`\`
+📁 1-Projects
+📁 2-Areas
+📁 3-Resources
+📁 4-Archives
+\`\`\`
+
+### 第 2 步：清空桌面和下载文件夹（30 分钟）
+
+- 桌面只保留常用软件快捷方式
+- 所有文件归类到 PARA
+- 临时文件删除
+
+### 第 3 步：整理现有文件（2-4 小时）
+
+不要追求完美，快速分类：
+1. 先分 Projects 和 Archives（最明确）
+2. 再分 Areas 和 Resources（需要思考）
+3. 不确定的临时放 Resources
+
+### 第 4 步：建立维护习惯
+
+- **每日：**新文件立即归类
+- **每周五：**回顾 Projects，归档已完成项目
+- **每月底：**检查 Areas 是否都在推进
+- **每季度：**清理 Resources 和 Archives
+
+### 第 5 步：扩展到其他工具
+
+PARA 不只是文件管理，更是信息管理系统：
+
+- **笔记软件：**Notion、Obsidian、印象笔记都可以用 PARA
+- **书签管理：**浏览器收藏夹用 PARA 分类
+- **邮件管理：**邮箱文件夹用 PARA 分类
+- **照片管理：**相册也可以用 PARA
+
+## 我的 PARA 案例
+
+**实施前：**
+- 桌面 60+ 个文件
+- 下载文件夹 300+ 个文件
+- 找一个文件平均需要 5 分钟
+
+**实施后：**
+- 桌面 0 个文件
+- 所有文件清晰分类
+- 找任何文件不超过 30 秒
+
+**最大的改变：**大脑不再需要记住&ldquo;那个文件在哪里&rdquo;，因为系统会告诉我。
+
+## 常见问题
+
+**Q：如果一个文件同时属于多个分类怎么办？**
+
+A：问自己&ldquo;现在最需要在哪里找到它？&rdquo;只放一个位置，必要时用快捷方式。
+
+**Q：子文件夹可以嵌套吗？**
+
+A：建议不超过 3 层，层级太深等于没整理。
+
+**Q：PARA 适合团队使用吗？**
+
+A：PARA 主要是个人系统，团队文件管理建议按项目 + 职能分类。
+
+## 开始行动
+
+1. 现在就创建 PARA 文件夹结构
+2. 用 30 分钟整理桌面和下载文件夹
+3. 坚持 21 天，让它成为习惯
+
+**记住：最好的系统是你会坚持使用的系统。**
+
+PARA 的魅力在于简单、直观、可持续。
+
+试试看，你会爱上这种掌控感。
     `,
-    author: "Jane Smith",
+    author: "曹钦楠",
     date: "2024-11-08",
-    category: "CSS",
-    readTime: "4 min read",
+    category: "数字整理",
+    readTime: "7 分钟",
   },
   {
-    id: "typescript-tips-tricks",
-    title: "10 TypeScript Tips and Tricks",
-    excerpt: "Level up your TypeScript skills with these useful tips and tricks for everyday development.",
+    id: "low-entropy-life",
+    title: "低熵生活：为什么你总是感觉很累？",
+    excerpt: "每天睡 8 小时还是累，周末补觉也没用？问题不在睡眠，而在于你的生活系统熵值太高了。",
     content: `
-# 10 TypeScript Tips and Tricks
+# 低熵生活：为什么你总是感觉很累？
 
-TypeScript has become the standard for large-scale JavaScript applications. Here are some tips to improve your TypeScript code.
+有没有这种感觉：
 
-## 1. Use Type Inference
+- 明明没干什么，但就是觉得累
+- 周末睡了 12 个小时，起来还是疲惫
+- 每天都在&ldquo;找东西&rdquo;&ldquo;想事情&rdquo;&ldquo;做决定&rdquo;，脑子像生锈了一样
+- 感觉生活失控，像陀螺一样被推着转
 
-Let TypeScript infer types when possible:
+如果以上有 2 条以上符合，说明你的生活系统&ldquo;熵值过高&rdquo;了。
 
-\`\`\`typescript
-const numbers = [1, 2, 3]; // TypeScript knows this is number[]
+## 什么是熵？
+
+**熵（Entropy）**，来自热力学第二定律，简单理解就是：**混乱度、无序度。**
+
+- 熵值高 = 混乱、无序、低效
+- 熵值低 = 有序、清晰、高效
+
+**生活中的高熵状态：**
+- 桌面堆满杂物，找个文件要翻半天
+- 手机 App 一屏一屏，每次打开都要找
+- 待办事项 30 条，不知道先做哪个
+- 每天被各种消息打断，没有完整的工作时间
+- 衣柜塞得满满的，每天早上纠结穿什么
+
+**这些&ldquo;小事&rdquo;看似无关紧要，实际上每一个都在消耗你的心理能量。**
+
+## 高熵生活的三大危害
+
+### 1. 决策疲劳（Decision Fatigue）
+
+人的意志力是有限的。
+
+- 扎克伯格每天穿同款 T 恤：减少衣服选择的决策
+- 乔布斯的极简衣橱：同样的黑色高领毛衣
+- 奥巴马只穿蓝色或灰色西装：&ldquo;我要把决策力用在国家大事上&rdquo;
+
+当你的生活充满小决策（今天穿什么、中午吃什么、先回哪个微信），大脑会疲惫不堪。
+
+### 2. 注意力碎片化（Attention Fragmentation）
+
+现代人的注意力被切成碎片：
+
+- 工作中被微信打断
+- 看书时刷一下手机
+- 开会时回复邮件
+- 写方案时想起要买的东西
+
+**研究显示：**每次被打断后，平均需要 23 分钟才能重新进入深度工作状态。
+
+### 3. 认知负荷过载（Cognitive Overload）
+
+大脑的工作记忆容量有限（约 7±2 个信息单元）。
+
+当你同时要记住：
+- 今天要做的 10 件事
+- 明天的 3 个会议
+- 下周要交的 2 个报告
+- 要给朋友的回复
+- 要买的东西清单
+
+**大脑会进入&ldquo;卡顿&rdquo;状态，什么都做不好。**
+
+## 如何建立低熵生活系统？
+
+### 原则 1：减少选择（Less is More）
+
+**物理空间：**
+- 衣柜：保留 20-30 件经典单品，组成胶囊衣橱
+- 桌面：只放当下在用的东西，其他收纳
+- 厨房：只留常用的锅碗瓢盆，其他捐赠
+
+**数字空间：**
+- 手机：主屏幕只放 12 个最常用 App
+- 电脑：桌面文件归零，使用 PARA 系统
+- 浏览器：书签不超过 30 个，定期清理
+
+**决策标准化：**
+- 早餐固定 3 种选择
+- 工作日穿搭公式化
+- 常去餐厅固定 5 家
+
+### 原则 2：建立系统（Systems over Goals）
+
+不要依赖意志力，而要建立自动运行的系统。
+
+**时间系统：**
+
+\`\`\`
+每天固定时间段：
+- 9:00-11:00：深度工作（最重要的事）
+- 11:00-12:00：沟通回复（邮件、微信）
+- 14:00-16:00：执行任务
+- 16:00-17:00：学习充电
+- 17:00-17:30：回顾规划
 \`\`\`
 
-## 2. Utility Types
+**信息系统：**
 
-TypeScript provides many useful utility types:
-
-\`\`\`typescript
-type User = {
-  id: number;
-  name: string;
-  email: string;
-};
-
-type PartialUser = Partial<User>;
-type UserWithoutEmail = Omit<User, 'email'>;
+\`\`\`
+所有信息只经过 3 个入口：
+1. 微信 → 每天 3 个固定时间段处理
+2. 邮件 → 每天 2 个固定时间段处理
+3. 笔记 → 灵感、想法统一记录在 Notion
 \`\`\`
 
-## 3. Const Assertions
+**任务系统：**
 
-Use const assertions for literal types:
-
-\`\`\`typescript
-const config = {
-  apiUrl: 'https://api.example.com',
-  timeout: 5000,
-} as const;
+\`\`\`
+所有任务分 4 类：
+1. 紧急重要 → 立即做
+2. 重要不紧急 → 安排时间做
+3. 紧急不重要 → 委托/快速处理
+4. 不紧急不重要 → 删除
 \`\`\`
 
-## 4. Discriminated Unions
+### 原则 3：定期维护（Regular Maintenance）
 
-Create type-safe state machines:
+低熵系统不是一劳永逸，需要定期维护。
 
-\`\`\`typescript
-type State =
-  | { status: 'loading' }
-  | { status: 'success'; data: string }
-  | { status: 'error'; error: Error };
-\`\`\`
+**每日维护（10 分钟）：**
+- 清空收件箱（邮件、微信收藏）
+- 清空桌面（物理 + 数字）
+- 规划明天的 3 件重要事
 
-## 5. Template Literal Types
+**每周维护（30 分钟）：**
+- 回顾本周完成情况
+- 清理手机截图、下载文件
+- 规划下周重点项目
 
-Build sophisticated string types:
+**每月维护（2 小时）：**
+- 检查 PARA 系统，归档完成项目
+- 清理订阅、关注、收藏
+- 复盘本月得失，调整系统
 
-\`\`\`typescript
-type Color = 'red' | 'blue' | 'green';
-type Shade = 'light' | 'dark';
-type ColorShade = \`\${Shade}-\${Color}\`;
-\`\`\`
+**每季度维护（半天）：**
+- 断舍离物品（衣服、书籍、工具）
+- 检查年度目标进展
+- 优化核心系统
 
-## More Tips
+## 我的低熵生活实践
 
-- Use unknown instead of any
-- Leverage strict mode
-- Use readonly for immutability
-- Take advantage of type guards
-- Use satisfies operator for type checking
+实施低熵系统一年后，我的变化：
 
-## Conclusion
+**物理空间：**
+- 衣柜从 100+ 件减少到 30 件，每天 3 分钟搞定穿搭
+- 书桌永远只有正在用的笔记本、一支笔、一杯水
+- 家里东西减少 60%，但生活质量提升
 
-These TypeScript tips will help you write more type-safe and maintainable code. Keep learning and exploring!
+**数字空间：**
+- 手机 App 从 80+ 减少到 35 个
+- 电脑文件从 5000+ 整理到 PARA 系统
+- 每天处理信息时间从 3 小时减少到 1 小时
+
+**心理状态：**
+- 焦虑感明显降低
+- 注意力更集中，深度工作时间从每天 2 小时提升到 4 小时
+- 睡眠质量改善，早上起床不再困难
+
+**最重要的改变：从&ldquo;被生活推着走&rdquo;变成&ldquo;主动掌控生活&rdquo;。**
+
+## 从哪里开始？
+
+不要试图一次改变所有，从最小可行动作开始：
+
+**第 1 周：物理空间**
+- 清空桌面，只留当下在用的物品
+- 整理衣柜，捐赠 1 年未穿的衣服
+
+**第 2 周：数字空间**
+- 清理手机，删除 30 天未使用的 App
+- 清空桌面文件夹，建立 PARA 系统
+
+**第 3 周：时间系统**
+- 找出每天 2 小时深度工作时间
+- 固定 3 个时间段处理消息
+
+**第 4 周：建立习惯**
+- 每天 10 分钟维护
+- 每周 30 分钟回顾
+
+## 写在最后
+
+低熵生活不是极简主义，而是&ldquo;只保留真正重要的&rdquo;。
+
+**高熵消耗能量，低熵释放能量。**
+
+当你的生活系统从混乱变为有序，你会发现：
+
+- 时间变多了
+- 注意力变清晰了
+- 焦虑变少了
+- 掌控感回来了
+
+**这才是真正的&ldquo;休息&rdquo;。**
+
+开始建立你的低熵生活系统吧，让生活回到你的掌控之中。
     `,
-    author: "Mike Johnson",
-    date: "2024-11-05",
-    category: "TypeScript",
-    readTime: "6 min read",
+    author: "曹钦楠",
+    date: "2024-11-06",
+    category: "生活整理",
+    readTime: "8 分钟",
   },
   {
-    id: "building-performant-react-apps",
-    title: "Building Performant React Applications",
-    excerpt: "Learn techniques and strategies to optimize your React applications for better performance.",
+    id: "attention-management-guide",
+    title: "注意力管理：数字时代的专注力修复指南",
+    excerpt: "每天刷手机 5 小时，真正专注工作不到 2 小时？你的注意力正在被算法偷走。这篇文章教你如何夺回主动权。",
     content: `
-# Building Performant React Applications
+# 注意力管理：数字时代的专注力修复指南
 
-Performance is crucial for user experience. Here's how to build fast React applications.
+你有多久没有连续 2 小时不看手机了？
 
-## Performance Optimization Techniques
+有多久没有完整读完一本书了？
 
-### 1. Code Splitting
+有多久没有静下心来，做一件事情了？
 
-Use dynamic imports to split your code:
+如果答案是&ldquo;很久&rdquo;，说明你的注意力系统已经被数字世界劫持了。
 
-\`\`\`javascript
-const HeavyComponent = lazy(() => import('./HeavyComponent'));
+## 注意力危机：被算法操控的大脑
+
+### 我们面临的现实
+
+**研究数据：**
+- 现代人平均每 11 分钟被打断一次
+- 每天切换任务 300-400 次
+- 平均专注时长从 2000 年的 12 分钟降到现在的 8 秒（比金鱼还短）
+- 每天查看手机 150+ 次
+
+**背后的真相：**
+
+各大科技公司雇佣顶尖心理学家、神经科学家，专门研究如何&ldquo;劫持&rdquo;你的注意力：
+
+- **无限下拉：**永远刷不完的内容
+- **推送通知：**制造紧迫感和 FOMO（害怕错过）
+- **红点标记：**触发强迫症心理
+- **算法推荐：**精准投喂你感兴趣的内容
+- **即时反馈：**点赞、评论产生多巴胺
+
+**他们的目标很简单：让你尽可能长时间停留在 App 上。**
+
+### 注意力碎片化的代价
+
+**工作层面：**
+- 深度工作能力下降
+- 创造力枯竭
+- 效率低下（8 小时工作，真正产出不到 3 小时）
+
+**学习层面：**
+- 无法深入思考
+- 记忆力下降
+- 知识碎片化，无法形成体系
+
+**生活层面：**
+- 焦虑感增加
+- 睡眠质量下降
+- 人际关系疏离（和人聊天时也在看手机）
+
+## 注意力管理的三个层次
+
+### 层次 1：环境设计（最重要）
+
+不要依赖意志力，而要设计环境让分心变得困难。
+
+**手机设置：**
+
+\`\`\`
+立即行动：
+1. 关闭所有非必要 App 的通知权限
+   保留：电话、短信、日历提醒
+   关闭：微信、抖音、小红书、淘宝等一切
+
+2. 删除主屏幕的娱乐 App
+   原则：打开娱乐 App 要经过 3 步以上
+
+3. 设置屏幕时间限制
+   娱乐类 App 每天不超过 30 分钟
+
+4. 开启灰度模式
+   设置 → 辅助功能 → 显示与文字大小 → 色彩滤镜
+   （彩色屏幕会增加诱惑）
+
+5. 打开专注模式
+   工作时段自动屏蔽干扰
 \`\`\`
 
-### 2. Memoization
+**工作空间：**
 
-Prevent unnecessary re-renders:
+\`\`\`
+物理环境：
+- 桌面只放当下任务相关物品
+- 手机放在视线外（抽屉/另一个房间）
+- 关闭电脑通知（微信、邮件、系统提示）
 
-\`\`\`javascript
-const MemoizedComponent = memo(MyComponent);
-const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
-const memoizedCallback = useCallback(() => doSomething(a, b), [a, b]);
+数字环境：
+- 浏览器安装专注插件（如 Freedom、Cold Turkey）
+- 关闭邮件客户端的自动提醒
+- 固定时间段批量处理消息（而非随时回复）
 \`\`\`
 
-### 3. Virtual Lists
+### 层次 2：时间块管理（最有效）
 
-Use virtualization for long lists:
+**核心原则：不同类型的工作需要不同类型的注意力。**
 
-\`\`\`javascript
-import { FixedSizeList } from 'react-window';
+**4 种工作模式：**
+
+1. **深度工作模式（Deep Work）**
+   - 时间：每天上午 9:00-11:00（大脑最清醒时段）
+   - 环境：完全隔绝干扰
+   - 任务：最重要、最需要创造力的工作
+   - 规则：手机静音放抽屉，关闭所有通讯工具
+
+2. **批量处理模式（Batch Processing）**
+   - 时间：每天 11:30、15:00、17:00（3 个固定时间段）
+   - 任务：回复微信、处理邮件、回复评论
+   - 规则：设定 25 分钟计时器，时间到立即停止
+
+3. **学习模式（Learning Mode）**
+   - 时间：每天 14:00-15:30（午休后精力恢复）
+   - 任务：阅读、学习新技能、课程学习
+   - 规则：使用番茄工作法（25 分钟专注 + 5 分钟休息）
+
+4. **创意模式（Creative Mode）**
+   - 时间：散步时、洗澡时、睡前（大脑放松状态）
+   - 任务：构思、头脑风暴、思考问题
+   - 规则：不带手机，准备笔记本随时记录灵感
+
+**每日时间块示例：**
+
+\`\`\`
+09:00-11:00 | 🧠 深度工作（最重要项目）
+11:00-11:30 | 💬 批量处理消息
+11:30-13:00 | 🍱 午餐 + 休息
+13:00-14:00 | 📝 执行类任务（不需要深度思考）
+14:00-15:30 | 📚 学习模式
+15:30-16:00 | 💬 批量处理消息
+16:00-17:30 | 📝 执行类任务
+17:30-18:00 | 📊 当日复盘 + 明日规划
 \`\`\`
 
-### 4. Image Optimization
+### 层次 3：刻意练习（最持久）
 
-Use next/image for automatic optimization:
+注意力也是一种肌肉，需要训练。
 
-\`\`\`javascript
-import Image from 'next/image';
+**练习 1：单任务专注训练**
+
+\`\`\`
+目标：重建大脑的专注能力
+
+方法：
+- 第 1 周：连续专注 15 分钟（不看手机、不切换任务）
+- 第 2 周：连续专注 25 分钟
+- 第 3 周：连续专注 45 分钟
+- 第 4 周：连续专注 90 分钟
+
+技巧：
+- 使用番茄工作法
+- 记录每次分心的时刻和原因
+- 逐步提升专注时长
 \`\`\`
 
-## Measuring Performance
+**练习 2：冥想训练**
 
-Use React DevTools Profiler to identify bottlenecks and optimize accordingly.
+\`\`\`
+研究证明：每天 10 分钟冥想，8 周后专注力提升 40%
 
-## Best Practices
+入门方法：
+1. 找一个安静的地方坐下
+2. 闭上眼睛，专注呼吸
+3. 当思绪飘走时，温和地拉回到呼吸上
+4. 从每天 5 分钟开始，逐步增加
 
-- Avoid inline function definitions in render
-- Use production builds
-- Implement error boundaries
-- Optimize bundle size
-- Use Server Components when possible
+推荐 App：
+- Headspace（英文）
+- Calm（英文）
+- 潮汐（中文）
+\`\`\`
 
-## Conclusion
+**练习 3：阅读纸质书**
 
-Performance optimization is an ongoing process. Measure, optimize, and test regularly to ensure the best user experience.
+\`\`\`
+为什么读纸质书？
+- 无法切换 App
+- 无法点击超链接
+- 强迫大脑进入线性阅读模式
+
+目标：
+- 第 1 周：每天读 10 页
+- 第 2 周：每天读 20 页
+- 第 3 周：每天读 30 页
+- 1 个月后：完整读完一本书
+
+技巧：
+- 固定阅读时间（如睡前 30 分钟）
+- 手机放在另一个房间
+- 选择有深度的书（而非碎片化读物）
+\`\`\`
+
+## 我的注意力修复实践
+
+**实施前的状态：**
+- 每天刷手机 6+ 小时
+- 真正专注工作不到 2 小时
+- 看书 10 分钟就想刷手机
+- 焦虑、失眠、效率低下
+
+**实施 3 个月后：**
+- 手机使用时间降到 1.5 小时
+- 每天深度工作 4 小时
+- 每周读完 1 本书
+- 睡眠质量改善，焦虑感明显降低
+
+**关键转变：**
+
+从&ldquo;手机控制我&rdquo;变成&ldquo;我控制手机&rdquo;。
+
+## 30 天注意力修复计划
+
+**第 1 周：清理环境**
+- Day 1-2：关闭所有非必要通知
+- Day 3-4：删除主屏幕娱乐 App
+- Day 5-7：设置屏幕时间限制，开启专注模式
+
+**第 2 周：建立时间块**
+- Day 8-10：划定每天 2 小时深度工作时间
+- Day 11-14：设定 3 个固定批量处理时间段
+
+**第 3 周：刻意练习**
+- Day 15-21：每天 25 分钟单任务专注训练
+
+**第 4 周：形成习惯**
+- Day 22-30：每天 10 分钟冥想 + 30 分钟纸质书阅读
+
+## 常见问题
+
+**Q：工作需要随时回复消息怎么办？**
+
+A：99% 的消息不需要&ldquo;随时&rdquo;回复。告诉同事你的批量处理时间段，真正紧急的事情会打电话。
+
+**Q：关闭通知后会不会错过重要信息？**
+
+A：实践发现，真正重要的信息不到 5%。定时查看就够了。
+
+**Q：注意力训练要多久才见效？**
+
+A：大脑可塑性很强。坚持 21 天会看到明显改善，3 个月会质变。
+
+## 写在最后
+
+**注意力是 21 世纪最稀缺的资源。**
+
+你把注意力放在哪里，你的人生就在哪里。
+
+- 放在刷抖音，你会得到短期快乐和长期空虚
+- 放在深度工作，你会得到成就感和竞争力
+- 放在学习成长，你会得到复利效应
+
+**选择权在你手里。**
+
+从今天开始，夺回你的注意力主权。
+
+30 天后，你会感谢现在的自己。
     `,
-    author: "Sarah Williams",
-    date: "2024-11-01",
-    category: "React",
-    readTime: "7 min read",
+    author: "曹钦楠",
+    date: "2024-11-03",
+    category: "生活整理",
+    readTime: "9 分钟",
   },
 ];
 

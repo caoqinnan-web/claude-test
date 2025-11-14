@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import { getBlogPosts, getCategories } from "@/lib/blog-data";
 
 export const metadata: Metadata = {
-  title: "Blog - My Portfolio",
-  description: "Read my latest articles and tutorials",
+  title: "文章 - 曹钦楠 | 人生整理师",
+  description: "阅读关于数字整理、AI 效率和生活整理的实用文章",
 };
 
 export default function BlogPage() {
@@ -17,22 +17,22 @@ export default function BlogPage() {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Blog
+            文章分享
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Thoughts, tutorials, and insights about web development and technology.
+            数字整理、AI 效率提升、生活整理的实践经验与深度思考
           </p>
         </div>
 
         {/* Categories */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
-          <span className="px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-medium">
-            All
+          <span className="px-4 py-2 bg-[#FF6B6B] text-white rounded-full text-sm font-medium">
+            全部
           </span>
           {categories.map((category) => (
             <span
               key={category}
-              className="px-4 py-2 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium hover:bg-gray-300 dark:hover:bg-gray-700 cursor-pointer transition-colors"
+              className="px-4 py-2 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium hover:bg-[#FF6B6B] hover:text-white dark:hover:bg-[#FF6B6B] cursor-pointer transition-colors"
             >
               {category}
             </span>
@@ -48,7 +48,7 @@ export default function BlogPage() {
             >
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs font-medium">
+                  <span className="px-3 py-1 bg-[#FF6B6B]/10 dark:bg-[#FF6B6B]/20 text-[#FF6B6B] dark:text-[#FF6B6B] rounded-full text-xs font-medium">
                     {post.category}
                   </span>
                   <span className="text-sm text-gray-500 dark:text-gray-400">
@@ -68,39 +68,35 @@ export default function BlogPage() {
                   <div className="text-sm text-gray-500 dark:text-gray-400">
                     <span className="font-medium">{post.author}</span>
                     <span className="mx-2">•</span>
-                    <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                    <span>{new Date(post.date).toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                   </div>
                 </div>
 
                 <Link
                   href={`/blog/${post.id}`}
-                  className="inline-block mt-4 text-blue-600 dark:text-blue-400 font-semibold hover:underline"
+                  className="inline-block mt-4 text-[#FF6B6B] dark:text-[#FF6B6B] font-semibold hover:underline"
                 >
-                  Read more →
+                  阅读全文 →
                 </Link>
               </div>
             </article>
           ))}
         </div>
 
-        {/* Newsletter Section */}
-        <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">
+        {/* Contact Section */}
+        <div className="mt-16 bg-gradient-to-r from-[#FF6B6B] to-[#845EF7] rounded-2xl p-12 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Subscribe to My Newsletter
+            想要了解更多？
           </h2>
-          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Get the latest articles and tutorials delivered to your inbox every week.
+          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
+            如果你也想建立低熵、有序、可持续的生活系统，欢迎通过邮件与我交流。
           </p>
-          <div className="max-w-md mx-auto flex gap-2">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500"
-            />
-            <button className="px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
-              Subscribe
-            </button>
-          </div>
+          <a
+            href="mailto:hello@caoqinnan.com"
+            className="inline-block px-8 py-3 bg-white text-[#FF6B6B] rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+          >
+            📧 联系我：hello@caoqinnan.com
+          </a>
         </div>
       </div>
     </div>
