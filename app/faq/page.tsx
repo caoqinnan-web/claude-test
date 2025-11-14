@@ -1,13 +1,18 @@
-import type { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "常见问题 - 曹钦楠 | 人生整理师",
-  description: "关于咨询服务的常见问题解答",
-};
+import { useState } from "react";
+import Button from "@/components/Button";
 
 export default function FAQPage() {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   const faqs = [
     {
+      category: "服务形式",
       question: "咨询形式是什么样的？",
       answer: `我提供两种咨询形式：
 
@@ -26,6 +31,7 @@ export default function FAQPage() {
 所有咨询都是一对一定制化服务，不是标准课程。`,
     },
     {
+      category: "准备工作",
       question: "我需要准备什么？",
       answer: `**线上咨询需要准备：**
 - 一台正常联网的电脑（台式机或笔记本均可）
@@ -44,6 +50,7 @@ export default function FAQPage() {
 - 接受"断舍离"的心理准备`,
     },
     {
+      category: "效果预期",
       question: "一般多久能看到效果？",
       answer: `这个因人而异，取决于：
 - 你的当前状态（混乱程度）
@@ -74,6 +81,7 @@ export default function FAQPage() {
 **关键是：**整理不是一次性的，而是建立一个可持续运转的系统。`,
     },
     {
+      category: "适用人群",
       question: "适合哪些人来做整理咨询？",
       answer: `**最适合的人群：**
 
@@ -103,6 +111,7 @@ export default function FAQPage() {
 - 完全没有时间投入的人`,
     },
     {
+      category: "隐私保护",
       question: "如何保护我的隐私和数据安全？",
       answer: `**隐私保护承诺：**
 
@@ -128,6 +137,7 @@ export default function FAQPage() {
 严格保护个人隐私，建立信任是一切合作的基础。`,
     },
     {
+      category: "定价说明",
       question: "服务价格是多少？",
       answer: `所有服务定价为**面议**，因为每个人的情况不同：
 
@@ -152,6 +162,7 @@ export default function FAQPage() {
 虽然需要一定的投资，但相比于长期的时间浪费、焦虑和低效，这是一个高回报的选择。`,
     },
     {
+      category: "服务次数",
       question: "只咨询一次可以吗？",
       answer: `**可以，但不推荐。**
 
@@ -175,6 +186,7 @@ export default function FAQPage() {
 帮你建立一个可以自己维护的系统，而不是长期依赖咨询。`,
     },
     {
+      category: "服务区域",
       question: "线下服务覆盖哪些城市？",
       answer: `**目前主要服务区域：**
 - 北京
@@ -198,6 +210,7 @@ export default function FAQPage() {
 **只有家庭空间整理才必须线下。**`,
     },
     {
+      category: "交付内容",
       question: "咨询后会提供什么交付物？",
       answer: `**根据服务类型，会提供：**
 
@@ -231,6 +244,7 @@ export default function FAQPage() {
 - 后续支持（邮件答疑）`,
     },
     {
+      category: "联系方式",
       question: "我还有其他问题，如何联系你？",
       answer: `**欢迎通过以下方式联系我：**
 
@@ -256,35 +270,75 @@ cqn1024@icloud.com
   ];
 
   return (
-    <div className="bg-white dark:bg-gray-900 min-h-screen">
+    <div className="bg-base-bg dark:bg-gray-900 min-h-screen">
       {/* Hero */}
-      <section className="bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 py-20">
+      <section className="bg-gradient-to-b from-coral/5 to-base-bg dark:from-coral/10 dark:to-gray-900 py-20">
         <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-deep-text dark:text-white mb-6">
             常见问题
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+          <p className="text-xl text-neutral-gray dark:text-gray-300 leading-relaxed">
             关于咨询服务的一切，你想知道的都在这里
           </p>
         </div>
       </section>
 
-      {/* FAQ Content */}
+      {/* FAQ Accordion */}
       <section className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
-        <div className="space-y-8">
+        <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-gray-800 rounded-2xl p-8 border-2 border-gray-100 dark:border-gray-700 hover:border-[#FF6B6B] dark:hover:border-[#FF6B6B] transition-all"
+              className="bg-white dark:bg-gray-800 rounded-2xl border-2 border-gray-100 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:border-coral dark:hover:border-coral"
             >
-              <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-start gap-3">
-                <span className="flex-shrink-0 w-8 h-8 bg-[#FF6B6B] text-white rounded-full flex items-center justify-center text-sm font-bold">
-                  Q
-                </span>
-                <span>{faq.question}</span>
-              </h2>
-              <div className="ml-11 text-gray-600 dark:text-gray-300 leading-relaxed whitespace-pre-line">
-                {faq.answer}
+              {/* Question Header - Clickable */}
+              <button
+                onClick={() => toggleFAQ(index)}
+                className="w-full p-6 md:p-8 flex items-center justify-between gap-4 text-left hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors"
+              >
+                <div className="flex items-start gap-4 flex-1">
+                  <span className="flex-shrink-0 w-10 h-10 bg-coral text-white rounded-full flex items-center justify-center text-sm font-bold">
+                    {index + 1}
+                  </span>
+                  <div className="flex-1">
+                    <div className="text-xs text-coral font-semibold uppercase tracking-wide mb-1">
+                      {faq.category}
+                    </div>
+                    <h2 className="text-lg md:text-xl font-bold text-deep-text dark:text-white">
+                      {faq.question}
+                    </h2>
+                  </div>
+                </div>
+
+                {/* Expand/Collapse Icon */}
+                <svg
+                  className={`w-6 h-6 text-coral transition-transform duration-300 flex-shrink-0 ${
+                    openIndex === index ? "rotate-180" : ""
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+
+              {/* Answer Content - Expandable */}
+              <div
+                className={`overflow-hidden transition-all duration-300 ${
+                  openIndex === index ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"
+                }`}
+              >
+                <div className="px-6 md:px-8 pb-6 md:pb-8 pt-0">
+                  <div className="pl-14 text-neutral-gray dark:text-gray-300 leading-relaxed whitespace-pre-line">
+                    {faq.answer}
+                  </div>
+                </div>
               </div>
             </div>
           ))}
@@ -292,7 +346,7 @@ cqn1024@icloud.com
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-r from-[#FF6B6B] to-[#845EF7] py-20">
+      <section className="bg-gradient-to-r from-coral via-accent-blue to-mint py-20">
         <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             还有其他问题？
@@ -300,12 +354,9 @@ cqn1024@icloud.com
           <p className="text-lg text-white/90 mb-8 leading-relaxed">
             欢迎通过邮件与我联系，我会尽快回复你
           </p>
-          <a
-            href="mailto:cqn1024@icloud.com"
-            className="inline-block px-10 py-4 bg-white text-[#FF6B6B] rounded-xl hover:bg-gray-100 transition-all shadow-xl font-medium text-lg"
-          >
+          <Button href="mailto:cqn1024@icloud.com" variant="outline" size="lg" className="!bg-white !text-coral hover:!bg-gray-100 !border-0">
             📧 发送邮件
-          </a>
+          </Button>
         </div>
       </section>
     </div>
