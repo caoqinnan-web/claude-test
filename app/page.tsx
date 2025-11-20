@@ -1,191 +1,244 @@
+"use client";
+
 import Link from "next/link";
+import { ArrowRight, Smartphone, Clock, Layout, Brain, Database } from "lucide-react";
+import { FadeIn } from "@/components/FadeIn";
 
 export default function Home() {
   return (
-    <div className="bg-gradient-to-b from-white via-gray-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-24 md:py-32">
-        <div className="text-center space-y-8">
-          <div className="inline-block">
-            <span className="inline-block px-4 py-2 bg-[#FF6B6B]/10 text-[#FF6B6B] rounded-full text-sm font-medium">
-              人生整理师 · 数字生活整理师 · AI 效率工具教练
-            </span>
-          </div>
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_50%)]" />
 
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-            重建低熵系统<br />
-            <span className="text-[#FF6B6B]">掌控你的生活</span>
-          </h1>
+        <div className="container px-4 md:px-6 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <FadeIn>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-sm font-medium mb-8">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                </span>
+                人生整理师 / 数字栖息地架构师
+              </div>
 
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            从混乱到有序，从焦虑到掌控。<br />
-            通过物理整理 + 数字整理 + AI 效率提升，<br className="hidden sm:block" />
-            帮助你建立一个<span className="text-[#FF6B6B] font-medium">低熵、有序、可持续</span>的生活和工作系统。
-          </p>
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-tight">
+                重建你的
+                <br />
+                <span className="text-gradient">数字栖息地</span>
+              </h1>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-            <Link
-              href="/services"
-              className="px-8 py-4 bg-[#FF6B6B] text-white rounded-xl hover:bg-[#FF5252] transition-all shadow-lg shadow-[#FF6B6B]/20 hover:shadow-xl font-medium"
-            >
-              了解我的服务
-            </Link>
-            <Link
-              href="/about"
-              className="px-8 py-4 bg-white dark:bg-gray-800 text-gray-900 dark:text-white border-2 border-gray-200 dark:border-gray-700 rounded-xl hover:border-[#FF6B6B] dark:hover:border-[#FF8787] transition-all font-medium"
-            >
-              认识阿楠
-            </Link>
+              <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-12 leading-relaxed max-w-2xl mx-auto">
+                在高噪音时代，通过建立低熵、有序的个人系统，
+                <br className="hidden md:block" />
+                让你重新掌控生活，回到真正重要的事情上。
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Link
+                  href="/services"
+                  className="px-8 py-4 rounded-full bg-black dark:bg-white text-white dark:text-black font-bold text-lg hover:scale-105 transition-transform flex items-center gap-2"
+                >
+                  探索服务
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link
+                  href="/about"
+                  className="px-8 py-4 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white font-bold text-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                >
+                  了解阿楠
+                </Link>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
 
-      {/* Problem Section - 痛点共鸣 */}
-      <section className="bg-gray-50 dark:bg-gray-800/50 py-20">
-        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              你是否也有这些困扰？
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400">
-              现代生活的混乱，不是你的错
-            </p>
-          </div>
+      {/* Intro / Philosophy Section */}
+      <section className="py-24 bg-white dark:bg-black relative overflow-hidden">
+        <div className="container px-4 md:px-6 mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <FadeIn>
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl opacity-20 blur-2xl" />
+                <div className="relative glass-card p-8 md:p-12 rounded-3xl">
+                  <h2 className="text-3xl font-bold mb-6">我是曹钦楠</h2>
+                  <div className="space-y-4 text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                    <p>
+                      从新疆棉花地到唐古拉山志愿者，从国企项目经理到自由职业者。
+                      我跨越了不同的地理与职业边界，最终在“整理”中找到了内心的秩序。
+                    </p>
+                    <p>
+                      我不仅仅是一名整理师，更是一名<strong>数字空间的建筑师</strong>。
+                      我帮助你打理的不仅是房间，更是你的电脑、手机、时间与注意力。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl border-2 border-gray-100 dark:border-gray-700 hover:border-[#FF6B6B]/30 transition-all">
-              <div className="text-4xl mb-4">📱</div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                数字混乱
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                文件找不到、照片成千上万、账号密码记不住、通知消息看不完…
+            <FadeIn delay={0.2}>
+              <div className="space-y-8">
+                <h3 className="text-4xl md:text-5xl font-bold leading-tight">
+                  混乱不是你的错，
+                  <br />
+                  <span className="text-gray-400">只是系统需要升级。</span>
+                </h3>
+                <p className="text-xl text-gray-600 dark:text-gray-400">
+                  我们提出了<strong>“低熵生活”</strong>理念：通过搭建稳定、有序、可维护的系统，减少精力损耗，让人重新成为自己生活的主人。
+                </p>
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="p-6 rounded-2xl bg-gray-50 dark:bg-gray-900">
+                    <Database className="w-8 h-8 text-blue-500 mb-4" />
+                    <h4 className="font-bold mb-2">数字有序</h4>
+                    <p className="text-sm text-gray-500">文件、照片、密码归位</p>
+                  </div>
+                  <div className="p-6 rounded-2xl bg-gray-50 dark:bg-gray-900">
+                    <Clock className="w-8 h-8 text-purple-500 mb-4" />
+                    <h4 className="font-bold mb-2">精力管理</h4>
+                    <p className="text-sm text-gray-500">时间块与节奏设计</p>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Preview (3 Pillars) */}
+      <section className="py-24 relative">
+        <div className="container px-4 md:px-6 mx-auto">
+          <FadeIn>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-bold mb-6">三大核心服务</h2>
+              <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                全方位重建你的个人操作系统
               </p>
             </div>
+          </FadeIn>
 
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl border-2 border-gray-100 dark:border-gray-700 hover:border-[#51CF66]/30 transition-all">
-              <div className="text-4xl mb-4">⏰</div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                时间失控
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                总是很忙却不知道忙了什么、拖延症严重、计划总是完不成…
-              </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Pillar 1: Digital Organizing */}
+            <FadeIn delay={0.1}>
+              <div className="group relative h-full bg-white dark:bg-gray-900 rounded-3xl border border-gray-200 dark:border-gray-800 p-8 hover:shadow-2xl transition-all duration-300">
+                <div className="w-12 h-12 rounded-2xl bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-6 group-hover:scale-110 transition-transform">
+                  <Smartphone size={24} />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">数字生活整理</h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                  手机、电脑、云端文件深度清理与结构化。建立PARA系统，让每一个文件都有家可归。
+                </p>
+                <ul className="space-y-2 text-sm text-gray-500 mb-8">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                    Apple 全家桶深度优化
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                    照片与资产归档
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                    第二大脑搭建
+                  </li>
+                </ul>
+              </div>
+            </FadeIn>
+
+            {/* Pillar 2: AI Coach */}
+            <FadeIn delay={0.2}>
+              <div className="group relative h-full bg-white dark:bg-gray-900 rounded-3xl border border-gray-200 dark:border-gray-800 p-8 hover:shadow-2xl transition-all duration-300">
+                <div className="w-12 h-12 rounded-2xl bg-purple-50 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400 mb-6 group-hover:scale-110 transition-transform">
+                  <Brain size={24} />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">AI 效率教练</h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                  不仅仅是教你用工具，而是构建 AI 工作流。让 AI 成为你的外脑，而不是负担。
+                </p>
+                <ul className="space-y-2 text-sm text-gray-500 mb-8">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                    定制化 Prompt 设计
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                    AI 辅助写作与决策
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                    知识管理自动化
+                  </li>
+                </ul>
+              </div>
+            </FadeIn>
+
+            {/* Pillar 3: Life Organizing */}
+            <FadeIn delay={0.3}>
+              <div className="group relative h-full bg-white dark:bg-gray-900 rounded-3xl border border-gray-200 dark:border-gray-800 p-8 hover:shadow-2xl transition-all duration-300">
+                <div className="w-12 h-12 rounded-2xl bg-green-50 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400 mb-6 group-hover:scale-110 transition-transform">
+                  <Layout size={24} />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">人生整理咨询</h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                  从物理空间到内心秩序。通过深度对话，帮你理清生活优先级，重建掌控感。
+                </p>
+                <ul className="space-y-2 text-sm text-gray-500 mb-8">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                    时间与注意力管理
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                    生活节奏设计
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                    行动力与拖延改善
+                  </li>
+                </ul>
+              </div>
+            </FadeIn>
+          </div>
+
+          <FadeIn delay={0.4}>
+            <div className="mt-16 text-center">
+              <Link
+                href="/services"
+                className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-bold hover:gap-4 transition-all"
+              >
+                查看详细服务方案
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </div>
+          </FadeIn>
+        </div>
+      </section>
 
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl border-2 border-gray-100 dark:border-gray-700 hover:border-[#845EF7]/30 transition-all">
-              <div className="text-4xl mb-4">🧠</div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                精力涣散
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                注意力无法集中、信息过载、焦虑却不知道该从哪里开始改变…
-              </p>
+      {/* Podcast / Media Section */}
+      <section className="py-24 bg-gray-50 dark:bg-gray-900">
+        <div className="container px-4 md:px-6 mx-auto text-center">
+          <FadeIn>
+            <h2 className="text-3xl font-bold mb-8">收听我的声音</h2>
+            <div className="max-w-2xl mx-auto glass-card p-8 rounded-3xl flex flex-col md:flex-row items-center gap-8">
+              <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center text-white font-bold text-2xl shadow-lg">
+                小宇宙
+              </div>
+              <div className="text-left flex-1">
+                <h3 className="text-xl font-bold mb-2">低熵生活指南</h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                  分享关于整理、效率与生活哲学的深度对谈。
+                </p>
+                <a
+                  href="https://www.xiaoyuzhoufm.com/episode/681b3d04e29814cf20d71c04"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 dark:text-blue-400 font-bold hover:underline"
+                >
+                  点击收听最新单集 →
+                </a>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Preview */}
-      <section className="py-24">
-        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              三大核心服务
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400">
-              从物理空间到数字世界，全方位帮你重建秩序
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* 数字生活整理 */}
-            <Link
-              href="/services#digital"
-              className="group bg-gradient-to-br from-[#FF6B6B]/5 to-[#FF6B6B]/10 dark:from-[#FF6B6B]/10 dark:to-[#FF6B6B]/20 p-8 rounded-2xl hover:shadow-xl transition-all border-2 border-transparent hover:border-[#FF6B6B]/30"
-            >
-              <div className="text-5xl mb-6">💻</div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-[#FF6B6B] transition-colors">
-                数字生活整理
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                手机、电脑、云端的系统级优化，让你的数字世界干净、直观、可持续
-              </p>
-              <div className="text-[#FF6B6B] font-medium group-hover:translate-x-2 transition-transform inline-block">
-                了解更多 →
-              </div>
-            </Link>
-
-            {/* AI 效率工具教练 */}
-            <Link
-              href="/services#ai"
-              className="group bg-gradient-to-br from-[#51CF66]/5 to-[#51CF66]/10 dark:from-[#51CF66]/10 dark:to-[#51CF66]/20 p-8 rounded-2xl hover:shadow-xl transition-all border-2 border-transparent hover:border-[#51CF66]/30"
-            >
-              <div className="text-5xl mb-6">🤖</div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-[#51CF66] transition-colors">
-                AI 效率工具教练
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                一对一定制 AI 工作流，让 AI 成为你的外脑和助理，而不是负担
-              </p>
-              <div className="text-[#51CF66] font-medium group-hover:translate-x-2 transition-transform inline-block">
-                了解更多 →
-              </div>
-            </Link>
-
-            {/* 人生整理 */}
-            <Link
-              href="/services#life"
-              className="group bg-gradient-to-br from-[#845EF7]/5 to-[#845EF7]/10 dark:from-[#845EF7]/10 dark:to-[#845EF7]/20 p-8 rounded-2xl hover:shadow-xl transition-all border-2 border-transparent hover:border-[#845EF7]/30"
-            >
-              <div className="text-5xl mb-6">🎯</div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-[#845EF7] transition-colors">
-                人生整理 & 时间管理
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                深度一对一咨询，从底层重建稳定有序的生活节奏和行动力
-              </p>
-              <div className="text-[#845EF7] font-medium group-hover:translate-x-2 transition-transform inline-block">
-                了解更多 →
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Philosophy Section */}
-      <section className="bg-gradient-to-r from-[#FF6B6B]/10 via-[#51CF66]/10 to-[#845EF7]/10 dark:from-[#FF6B6B]/20 dark:via-[#51CF66]/20 dark:to-[#845EF7]/20 py-20">
-        <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
-          <div className="text-5xl mb-6">✨</div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-            一个人如果能掌控自己的<br className="hidden sm:block" />
-            <span className="text-[#FF6B6B]">物理空间</span>、
-            <span className="text-[#51CF66]">数字空间</span>和
-            <span className="text-[#845EF7]">注意力</span><br className="hidden sm:block" />
-            他就能掌控自己的人生
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-            这就是低熵系统的力量
-          </p>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24">
-        <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-            准备好开始改变了吗？
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-            从混乱到有序，从被动到主动。<br />
-            让我们一起建立属于你的低熵系统。
-          </p>
-          <Link
-            href="/about"
-            className="inline-block px-10 py-4 bg-[#FF6B6B] text-white rounded-xl hover:bg-[#FF5252] transition-all shadow-lg shadow-[#FF6B6B]/20 hover:shadow-xl font-medium text-lg"
-          >
-            联系阿楠
-          </Link>
+          </FadeIn>
         </div>
       </section>
     </div>

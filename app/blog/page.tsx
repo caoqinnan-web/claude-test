@@ -1,108 +1,126 @@
+"use client";
+
+import { FadeIn } from "@/components/FadeIn";
+import { Calendar, Clock, Tag, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import type { Metadata } from "next";
-import { getBlogPosts, getCategories } from "@/lib/blog-data";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+import { CATEGORIES, getPostsByCategory } from "@/lib/blog-data";
 
-export const metadata: Metadata = {
-  title: "Blog - My Portfolio",
-  description: "Read my latest articles and tutorials",
-};
+export default function Blog() {
+  const [activeCategory, setActiveCategory] = useState("all");
 
-export default function BlogPage() {
-  const posts = getBlogPosts();
-  const categories = getCategories();
+  const filteredPosts = getPostsByCategory(activeCategory);
 
   return (
-    <div className="bg-white dark:bg-gray-900 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Blog
+    <div className="min-h-screen pt-24 pb-20">
+      {/* Header */}
+      <section className="container px-4 md:px-6 mx-auto mb-16 text-center">
+        <FadeIn>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            思考与<span className="text-gradient">沉淀</span>
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Thoughts, tutorials, and insights about web development and technology.
+            分享关于数字整理、AI 效率与低熵生活的深度思考。
           </p>
-        </div>
+        </FadeIn>
+      </section>
 
-        {/* Categories */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          <span className="px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-medium">
-            All
-          </span>
-          {categories.map((category) => (
-            <span
-              key={category}
-              className="px-4 py-2 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium hover:bg-gray-300 dark:hover:bg-gray-700 cursor-pointer transition-colors"
-            >
-              {category}
-            </span>
-          ))}
-        </div>
-
-        {/* Blog Posts Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {posts.map((post) => (
-            <article
-              key={post.id}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-            >
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs font-medium">
-                    {post.category}
-                  </span>
-                  <span className="text-sm text-gray-500 dark:text-gray-400">
-                    {post.readTime}
-                  </span>
-                </div>
-
-                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3 line-clamp-2">
-                  {post.title}
-                </h2>
-
-                <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
-                  {post.excerpt}
-                </p>
-
-                <div className="flex items-center justify-between">
-                  <div className="text-sm text-gray-500 dark:text-gray-400">
-                    <span className="font-medium">{post.author}</span>
-                    <span className="mx-2">•</span>
-                    <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
-                  </div>
-                </div>
-
-                <Link
-                  href={`/blog/${post.id}`}
-                  className="inline-block mt-4 text-blue-600 dark:text-blue-400 font-semibold hover:underline"
-                >
-                  Read more →
-                </Link>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        {/* Newsletter Section */}
-        <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Subscribe to My Newsletter
-          </h2>
-          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Get the latest articles and tutorials delivered to your inbox every week.
-          </p>
-          <div className="max-w-md mx-auto flex gap-2">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500"
-            />
-            <button className="px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
-              Subscribe
-            </button>
+      {/* Filter */}
+      <section className="container px-4 md:px-6 mx-auto mb-16">
+        <FadeIn delay={0.1}>
+          <div className="flex flex-wrap justify-center gap-4">
+            {CATEGORIES.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setActiveCategory(cat.id)}
+                className={cn(
+                  "px-6 py-2 rounded-full text-sm font-medium transition-all duration-300",
+                  activeCategory === cat.id
+                    ? "bg-black dark:bg-white text-white dark:text-black scale-105"
+                    : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
+                )}
+              >
+                {cat.label}
+              </button>
+            ))}
           </div>
+        </FadeIn>
+      </section>
+
+      {/* Blog Grid */}
+      <section className="container px-4 md:px-6 mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {filteredPosts.map((post, index) => (
+            <FadeIn key={post.id} delay={index * 0.1}>
+              <Link href={`/blog/${post.id}`} className="block h-full">
+                <article className="group cursor-pointer flex flex-col h-full bg-white dark:bg-gray-900 rounded-3xl border border-gray-200 dark:border-gray-800 overflow-hidden hover:shadow-2xl transition-all duration-300">
+                  {/* Image Placeholder */}
+                  <div className={cn("h-48 w-full relative overflow-hidden", post.image)}>
+                    <div className="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-105 transition-transform duration-500">
+                      <span className="text-4xl font-bold text-black dark:text-white">
+                        {post.categoryLabel.slice(0, 2)}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="p-8 flex flex-col flex-1">
+                    <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                      <span className="flex items-center gap-1">
+                        <Tag size={14} />
+                        {post.categoryLabel}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Calendar size={14} />
+                        {post.date}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Clock size={14} />
+                        {post.readTime}
+                      </span>
+                    </div>
+
+                    <h2 className="text-2xl font-bold mb-4 group-hover:text-blue-600 transition-colors">
+                      {post.title}
+                    </h2>
+                    <p className="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3 flex-1">
+                      {post.excerpt}
+                    </p>
+
+                    <div className="flex items-center text-blue-600 dark:text-blue-400 font-bold group-hover:gap-2 transition-all">
+                      阅读全文
+                      <ArrowRight size={18} />
+                    </div>
+                  </div>
+                </article>
+              </Link>
+            </FadeIn>
+          ))}
         </div>
-      </div>
+      </section>
+
+      {/* Newsletter */}
+      <section className="container px-4 md:px-6 mx-auto mt-32">
+        <FadeIn delay={0.4}>
+          <div className="max-w-4xl mx-auto bg-gray-50 dark:bg-gray-900 rounded-3xl p-8 md:p-16 text-center">
+            <h2 className="text-3xl font-bold mb-4">订阅更新</h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-xl mx-auto">
+              每月 1-2 篇深度文章。关于如何在这个混乱的世界里，构建属于你的秩序。
+            </p>
+            <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" onSubmit={(e) => e.preventDefault()}>
+              <input
+                type="email"
+                placeholder="your@email.com"
+                className="flex-1 px-6 py-3 rounded-full bg-white dark:bg-black border border-gray-200 dark:border-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <button className="px-8 py-3 rounded-full bg-black dark:bg-white text-white dark:text-black font-bold hover:scale-105 transition-transform">
+                订阅
+              </button>
+            </form>
+          </div>
+        </FadeIn>
+      </section>
     </div>
   );
 }
+
