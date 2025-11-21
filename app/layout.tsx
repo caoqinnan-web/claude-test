@@ -9,21 +9,8 @@ import { cn } from "@/lib/utils";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "曹钦楠 - 全栈开发工程师 & 人生整理师",
-  description: "探索数字与生活的秩序之美。个人作品集网站，使用 Next.js 和 TailwindCSS 构建。",
-  openGraph: {
-    type: "website",
-    locale: "zh_CN",
-    url: "https://your-domain.com",
-    title: "曹钦楠 - 全栈开发工程师 & 人生整理师",
-    description: "探索数字与生活的秩序之美。",
-    siteName: "曹钦楠的个人网站",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "曹钦楠 - 全栈开发工程师 & 人生整理师",
-    description: "探索数字与生活的秩序之美。",
-  },
+  title: "曹钦楠 - 人生整理师 | 数字生活整理 | AI 效率工具教练",
+  description: "通过物理整理 + 数字整理 + AI 效率提升，帮助你建立低熵、有序、可持续的生活和工作系统。专业一对一咨询服务。",
 };
 
 export default function RootLayout({

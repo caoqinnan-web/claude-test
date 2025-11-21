@@ -5,67 +5,97 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-50 dark:bg-black border-t border-gray-200 dark:border-gray-800">
-      <div className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
+    <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 mt-auto">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-              Let&apos;s work <br />
-              <span className="text-gradient">together.</span>
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-md">
-              准备好开始改变了吗？让我们一起构建你的低熵系统。
+            <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+              曹钦楠
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
+              人生整理师 · 个人数字空间建筑师 · AI 效率工具教练
+            </p>
+            <p className="text-gray-500 dark:text-gray-500 text-sm">
+              建立低熵系统，掌控你的生活
             </p>
           </div>
-          <div className="flex flex-col justify-end items-start md:items-end">
-            <a
-              href="mailto:cqn1024@icloud.com"
-              className="group flex items-center gap-3 text-2xl md:text-3xl font-bold hover:text-blue-600 transition-colors"
-            >
-              <Mail className="w-8 h-8" />
-              cqn1024@icloud.com
-              <ArrowRight className="w-8 h-8 group-hover:-rotate-45 transition-transform duration-300" />
-            </a>
+
+          <div>
+            <h4 className="text-sm font-semibold mb-4 text-gray-900 dark:text-white uppercase tracking-wider">
+              导航
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  href="/about"
+                  className="text-gray-600 dark:text-gray-400 hover:text-[#FF6B6B] dark:hover:text-[#FF8787] text-sm transition-colors"
+                >
+                  关于阿楠
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-gray-600 dark:text-gray-400 hover:text-[#FF6B6B] dark:hover:text-[#FF8787] text-sm transition-colors"
+                >
+                  服务
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog"
+                  className="text-gray-600 dark:text-gray-400 hover:text-[#FF6B6B] dark:hover:text-[#FF8787] text-sm transition-colors"
+                >
+                  文章
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-semibold mb-4 text-gray-900 dark:text-white uppercase tracking-wider">
+              联系方式
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <a
+                  href="mailto:cqn1024@icloud.com"
+                  className="text-gray-600 dark:text-gray-400 hover:text-[#FF6B6B] dark:hover:text-[#FF8787] text-sm transition-colors flex items-center gap-2"
+                >
+                  <span>📧</span>
+                  <span>邮件咨询</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://xhslink.com/m/741qhM8BMO0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 dark:text-gray-400 hover:text-[#FF6B6B] dark:hover:text-[#FF8787] text-sm transition-colors flex items-center gap-2"
+                >
+                  <span>📕</span>
+                  <span>小红书</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.xiaoyuzhoufm.com/episode/681b3d04e29814cf20d71c04"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 dark:text-gray-400 hover:text-[#FF6B6B] dark:hover:text-[#FF8787] text-sm transition-colors flex items-center gap-2"
+                >
+                  <span>🎙️</span>
+                  <span>播客</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-200 dark:border-gray-800">
-          <div className="flex gap-8 mb-8 md:mb-0">
-            <Link
-              href="/about"
-              className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
-            >
-              关于我
-            </Link>
-            <Link
-              href="/services"
-              className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
-            >
-              服务
-            </Link>
-            <Link
-              href="/blog"
-              className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
-            >
-              文章
-            </Link>
-          </div>
-
-          <div className="flex items-center gap-6">
-            <a
-              href="https://xhslink.com/m/741qhM8BMO0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-400 hover:text-red-500 transition-colors font-medium flex items-center gap-2"
-            >
-              小红书
-              <ArrowRight className="w-4 h-4 -rotate-45" />
-            </a>
-          </div>
-        </div>
-
-        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-          <p>© {currentYear} Cao Qinnan. All rights reserved.</p>
+        <div className="pt-8 border-t border-gray-200 dark:border-gray-800 text-center">
+          <p className="text-gray-500 dark:text-gray-500 text-sm">
+            © {currentYear} 曹钦楠. 保留所有权利.
+          </p>
         </div>
       </div>
     </footer>
